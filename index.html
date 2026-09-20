@@ -5,585 +5,541 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Эффективность полочного пространства · Золотое Яблоко Иркутск</title>
 <style>
-  :root {
-    --bg: #fafafa;
-    --surface: #ffffff;
-    --surface-2: #f4f4f5;
-    --border: #e4e4e7;
-    --border-strong: #d4d4d8;
-    --text: #09090b;
-    --text-muted: #71717a;
-    --text-subtle: #a1a1aa;
-    --accent: #c5f04b;
-    --accent-dark: #a8d83a;
-    --accent-soft: #eefbd0;
-    --success: #22c55e;
-    --warning: #f59e0b;
-    --danger: #ef4444;
-    --radius: 14px;
-    --radius-sm: 10px;
-    --radius-lg: 20px;
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
-    --shadow: 0 4px 20px rgba(0,0,0,0.04);
-    --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, Roboto, sans-serif;
-  }
+:root {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --surface-2: #f4f4f5;
+  --border: #e4e4e7;
+  --border-strong: #d4d4d8;
+  --text: #09090b;
+  --text-muted: #71717a;
+  --text-subtle: #a1a1aa;
+  --accent: #c5f04b;
+  --accent-dark: #a8d83a;
+  --accent-soft: #eefbd0;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow: 0 4px 20px rgba(0,0,0,0.04);
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, Roboto, sans-serif;
+}
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
-  body {
-    font-family: var(--font);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.55;
-    font-size: 15px;
-    -webkit-font-smoothing: antialiased;
-    letter-spacing: -0.01em;
-  }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
 
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 24px 20px 80px;
-  }
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+}
 
-  .topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 0;
-    margin-bottom: 24px;
-    border-bottom: 1px solid var(--border);
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--text-muted);
-  }
-  .brand-logo {
-    width: 28px; height: 28px;
-    border-radius: 8px;
-    background: var(--accent);
-    display: grid; place-items: center;
-    font-weight: 700; color: #09090b;
-    font-size: 14px;
-  }
-  .topbar-meta { font-size: 12px; color: var(--text-subtle); }
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.brand-logo {
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  background: var(--accent);
+  display: grid; place-items: center;
+  font-weight: 700; color: #09090b;
+  font-size: 14px;
+}
+.topbar-meta { font-size: 12px; color: var(--text-subtle); }
 
-  .hero { padding: 40px 0 48px; }
-  .hero-eyebrow {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 16px;
-  }
-  .hero h1 {
-    font-size: clamp(28px, 5vw, 44px);
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    margin-bottom: 16px;
-    max-width: 800px;
-  }
-  .hero h1 .accent {
-    background: var(--accent);
-    padding: 0 8px;
-    border-radius: 8px;
-  }
-  .hero-sub {
-    font-size: 17px;
-    color: var(--text-muted);
-    max-width: 680px;
-    margin-bottom: 32px;
-  }
-  .hero-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    font-size: 13px;
-    color: var(--text-muted);
-  }
-  .hero-meta span strong { color: var(--text); font-weight: 600; }
+.hero { padding: 40px 0 48px; }
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  max-width: 800px;
+}
+.hero h1 .accent {
+  background: var(--accent);
+  padding: 0 8px;
+  border-radius: 8px;
+}
+.hero-sub {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 680px;
+  margin-bottom: 32px;
+}
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.hero-meta span strong { color: var(--text); font-weight: 600; }
 
-  .kpi-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 12px;
-    margin: 32px 0 48px;
-  }
-  .kpi {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 20px;
-    box-shadow: var(--shadow-sm);
-  }
-  .kpi-label {
-    font-size: 12px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 8px;
-  }
-  .kpi-value {
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1;
-  }
-  .kpi-delta { font-size: 13px; margin-top: 8px; color: var(--text-muted); }
-  .kpi-delta.pos { color: var(--success); }
-  .kpi-delta.neg { color: var(--danger); }
-  .kpi.target {
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-    border-color: transparent;
-  }
-  .kpi.target .kpi-label,
-  .kpi.target .kpi-delta { color: rgba(0,0,0,0.6); }
-  .kpi.target .kpi-value { color: #09090b; }
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin: 32px 0 48px;
+}
+.kpi {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.kpi-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+.kpi-value {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.kpi-delta { font-size: 13px; margin-top: 8px; color: var(--text-muted); }
+.kpi-delta.pos { color: var(--success); }
+.kpi-delta.neg { color: var(--danger); }
+.kpi.target {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  border-color: transparent;
+}
+.kpi.target .kpi-label,
+.kpi.target .kpi-delta { color: rgba(0,0,0,0.6); }
+.kpi.target .kpi-value { color: #09090b; }
 
-  section { margin-bottom: 56px; }
-  .section-head { margin-bottom: 20px; }
-  .section-eyebrow {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--accent-dark);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 8px;
-  }
-  .section-title {
-    font-size: clamp(22px, 3.5vw, 28px);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
-  }
-  .section-desc {
-    color: var(--text-muted);
-    font-size: 15px;
-    max-width: 720px;
-  }
+section { margin-bottom: 56px; }
+.section-head { margin-bottom: 20px; }
+.section-eyebrow {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.section-title {
+  font-size: clamp(22px, 3.5vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.section-desc {
+  color: var(--text-muted);
+  font-size: 15px;
+  max-width: 720px;
+}
 
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px;
-    box-shadow: var(--shadow-sm);
-  }
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
 
-  .chart-wrap {
-    position: relative;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  canvas { display: block; max-width: 100%; }
+.chart-wrap {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+canvas { display: block; max-width: 100%; }
 
-  /* Tabs — компактные, в несколько строк */
-  .tabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 16px;
-  }
-  .tab {
-    padding: 7px 12px;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    background: var(--surface);
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text-muted);
-    cursor: pointer;
-    transition: all 0.15s;
-    font-family: inherit;
-    white-space: nowrap;
-    min-height: 32px;
-  }
-  .tab:hover { border-color: var(--border-strong); color: var(--text); }
-  .tab.active {
-    background: var(--text);
-    color: var(--surface);
-    border-color: var(--text);
-  }
-  .tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.tab {
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+  white-space: nowrap;
+  min-height: 32px;
+}
+.tab:hover { border-color: var(--border-strong); color: var(--text); }
+.tab.active {
+  background: var(--text);
+  color: var(--surface);
+  border-color: var(--text);
+}
+.tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-  .brand-list { display: grid; gap: 8px; }
-  .brand-row {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: 12px;
-    align-items: center;
-    padding: 12px 14px;
-    background: var(--surface-2);
-    border-radius: var(--radius-sm);
-    font-size: 14px;
-  }
-  .brand-row .name { font-weight: 500; }
-  .brand-row .eff {
-    font-weight: 600;
-    font-variant-numeric: tabular-nums;
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-size: 12px;
-  }
-  .brand-row .eff.hi { background: var(--accent-soft); color: #3f5f00; }
-  .brand-row .eff.mid { background: #fef3c7; color: #92400e; }
-  .brand-row .eff.lo { background: #fee2e2; color: #991b1b; }
-  .brand-row .shelves {
-    font-size: 12px;
-    color: var(--text-muted);
-    font-variant-numeric: tabular-nums;
-  }
+.brand-list { display: grid; gap: 8px; }
+.brand-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+}
+.brand-row .name { font-weight: 500; }
+.brand-row .eff {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+.brand-row .eff.hi { background: var(--accent-soft); color: #3f5f00; }
+.brand-row .eff.mid { background: #fef3c7; color: #92400e; }
+.brand-row .eff.lo { background: #fee2e2; color: #991b1b; }
+.brand-row .shelves {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
 
-  .two-col {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  @media (min-width: 760px) {
-    .two-col { grid-template-columns: 1fr 1fr; }
-  }
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 760px) {
+  .two-col { grid-template-columns: 1fr 1fr; }
+}
 
-  .col-head {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 12px;
-  }
-  .col-head .dot { width: 8px; height: 8px; border-radius: 50%; }
-  .col-head .dot.green { background: var(--success); }
-  .col-head .dot.red { background: var(--danger); }
+.col-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+.col-head .dot { width: 8px; height: 8px; border-radius: 50%; }
+.col-head .dot.green { background: var(--success); }
+.col-head .dot.red { background: var(--danger); }
 
-  /* Пожиратели — расширенный блок */
-  .predators-card {
-    background: linear-gradient(135deg, #fef2f2 0%, #fff 60%);
-    border: 1px solid #fecaca;
-    border-radius: var(--radius-lg);
-    padding: 28px;
-  }
-  .predators-card h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 8px;
-  }
-  .predators-card > p {
-    color: var(--text-muted);
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 1.55;
-  }
-  .predators-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-  .predators-stat {
-    background: rgba(255,255,255,0.7);
-    border: 1px solid #fecaca;
-    border-radius: var(--radius-sm);
-    padding: 14px;
-  }
-  .predators-stat .b { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
-  .predators-stat .v {
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--danger);
-    font-variant-numeric: tabular-nums;
-  }
-  .predators-stat .d { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.predators-card {
+  background: linear-gradient(135deg, #fef2f2 0%, #fff 60%);
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+.predators-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.predators-card > p {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 16px;
+  line-height: 1.55;
+}
+.formula-box {
+  background: rgba(255,255,255,0.85);
+  border: 1px dashed #fca5a5;
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.6;
+}
+.formula-box .formula {
+  display: block;
+  font-family: "SF Mono", Menlo, Consolas, monospace;
+  font-size: 13px;
+  background: #fff;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 8px 0;
+  color: #991b1b;
+  font-weight: 500;
+}
+.formula-box .note {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
 
-  .predators-table-wrap {
-    overflow-x: auto;
-    border-radius: var(--radius-sm);
-    border: 1px solid #fecaca;
-    background: rgba(255,255,255,0.7);
-  }
-  .predators-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-    min-width: 560px;
-  }
-  .predators-table th {
-    text-align: left;
-    padding: 10px 14px;
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #991b1b;
-    background: rgba(254, 202, 202, 0.3);
-    border-bottom: 1px solid #fecaca;
-  }
-  .predators-table td {
-    padding: 10px 14px;
-    border-bottom: 1px solid rgba(254, 202, 202, 0.4);
-    font-variant-numeric: tabular-nums;
-  }
-  .predators-table tr:last-child td { border-bottom: none; }
-  .predators-table .loss {
-    color: var(--danger);
-    font-weight: 600;
-  }
+.predators-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.predators-stat {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  padding: 14px;
+}
+.predators-stat .b { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
+.predators-stat .v {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--danger);
+  font-variant-numeric: tabular-nums;
+}
+.predators-stat .d { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
 
-  /* Новые бренды */
-  .new-brands-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  @media (min-width: 640px) {
-    .new-brands-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (min-width: 960px) {
-    .new-brands-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  .new-brand {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 18px;
-    transition: all 0.2s;
-  }
-  .new-brand:hover {
-    border-color: var(--accent-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-  }
-  .new-brand-cat {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--accent-dark);
-    background: var(--accent-soft);
-    padding: 3px 8px;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-  .new-brand-name {
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 4px;
-    letter-spacing: -0.01em;
-  }
-  .new-brand-country {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-bottom: 10px;
-  }
-  .new-brand-desc {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-bottom: 14px;
-    line-height: 1.5;
-  }
-  .new-brand-metrics {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-    font-size: 12px;
-  }
-  .new-brand-metrics .m-label { color: var(--text-muted); }
-  .new-brand-metrics .m-val { font-weight: 600; color: var(--text); }
+.predators-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid #fecaca;
+  background: rgba(255,255,255,0.7);
+}
+.predators-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 560px;
+}
+.predators-table th {
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #991b1b;
+  background: rgba(254, 202, 202, 0.3);
+  border-bottom: 1px solid #fecaca;
+}
+.predators-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(254, 202, 202, 0.4);
+  font-variant-numeric: tabular-nums;
+}
+.predators-table tr:last-child td { border-bottom: none; }
+.predators-table .loss {
+  color: var(--danger);
+  font-weight: 600;
+}
 
-  /* Small multiples */
-  .sm-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  @media (min-width: 640px) {
-    .sm-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (min-width: 960px) {
-    .sm-grid { grid-template-columns: repeat(3, 1fr); }
-  }
-  .sm-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 14px;
-    box-shadow: var(--shadow-sm);
-  }
-  .sm-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 8px;
-    gap: 8px;
-  }
-  .sm-title {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-  }
-  .sm-kpi {
-    font-size: 12px;
-    font-weight: 600;
-    font-variant-numeric: tabular-nums;
-    padding: 2px 8px;
-    border-radius: 999px;
-  }
-  .sm-kpi.hi { background: var(--accent-soft); color: #3f5f00; }
-  .sm-kpi.mid { background: #fef3c7; color: #92400e; }
-  .sm-kpi.lo { background: #fee2e2; color: #991b1b; }
-  .sm-canvas-wrap {
-    position: relative;
-    width: 100%;
-  }
-  .sm-canvas-wrap canvas {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  .sm-legend {
-    display: flex;
-    gap: 10px;
-    margin-top: 8px;
-    font-size: 10px;
-    color: var(--text-muted);
-    flex-wrap: wrap;
-  }
-  .sm-legend span {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-  .sm-legend i {
-    width: 6px; height: 6px; border-radius: 50%;
-    display: inline-block;
-  }
+.new-brands-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 640px) {
+  .new-brands-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  .new-brands-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.new-brand {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  transition: all 0.2s;
+}
+.new-brand:hover {
+  border-color: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.new-brand-cat {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-dark);
+  background: var(--accent-soft);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.new-brand-name {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.new-brand-country {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+.new-brand-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.new-brand-metrics {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+}
+.new-brand-metrics .m-label { color: var(--text-muted); }
+.new-brand-metrics .m-val { font-weight: 600; color: var(--text); }
 
-  /* Roadmap */
-  .roadmap { display: grid; gap: 12px; }
-  .roadmap-step {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 20px 24px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 16px;
-    align-items: start;
-  }
-  .step-num {
-    width: 36px; height: 36px;
-    border-radius: 10px;
-    background: var(--accent);
-    display: grid; place-items: center;
-    font-weight: 700;
-    font-size: 15px;
-    color: #09090b;
-    flex-shrink: 0;
-  }
-  .step-body h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
-  .step-body p { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
-  .step-body ul { margin-top: 8px; padding-left: 18px; font-size: 13px; color: var(--text-muted); }
-  .step-body li { margin-bottom: 4px; }
+.roadmap { display: grid; gap: 12px; }
+.roadmap-step {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.step-num {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  background: var(--accent);
+  display: grid; place-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #09090b;
+  flex-shrink: 0;
+}
+.step-body h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.step-body p { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+.step-body ul { margin-top: 8px; padding-left: 18px; font-size: 13px; color: var(--text-muted); }
+.step-body li { margin-bottom: 4px; }
 
-  /* Итог */
-  .summary-card {
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
-    border-radius: var(--radius-lg);
-    padding: 32px;
-  }
-  .summary-label {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: rgba(0,0,0,0.5);
-    margin-bottom: 16px;
-  }
-  .summary-list {
-    list-style: none;
-    display: grid;
-    gap: 12px;
-  }
-  .summary-list li {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 12px;
-    align-items: start;
-    font-size: 14px;
-    color: #09090b;
-    line-height: 1.5;
-  }
-  .summary-list .bullet {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: #09090b;
-    margin-top: 8px;
-    flex-shrink: 0;
-  }
-  .summary-list strong { font-weight: 700; }
-  .summary-kpi {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(0,0,0,0.15);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .summary-kpi-item .l {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: rgba(0,0,0,0.5);
-    margin-bottom: 4px;
-  }
-  .summary-kpi-item .v {
-    font-size: 22px;
-    font-weight: 700;
-    font-variant-numeric: tabular-nums;
-  }
+.summary-card {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+.summary-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(0,0,0,0.5);
+  margin-bottom: 16px;
+}
+.summary-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+.summary-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+  font-size: 14px;
+  color: #09090b;
+  line-height: 1.5;
+}
+.summary-list .bullet {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #09090b;
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+.summary-list strong { font-weight: 700; }
+.summary-kpi {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0,0,0,0.15);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.summary-kpi-item .l {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(0,0,0,0.5);
+  margin-bottom: 4px;
+}
+.summary-kpi-item .v {
+  font-size: 22px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
 
-  .legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 12px;
-    font-size: 12px;
-    color: var(--text-muted);
-  }
-  .legend-item { display: flex; align-items: center; gap: 6px; }
-  .legend-swatch { width: 10px; height: 10px; border-radius: 3px; }
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+.legend-item { display: flex; align-items: center; gap: 6px; }
+.legend-swatch { width: 10px; height: 10px; border-radius: 3px; }
 
-  footer {
-    padding: 32px 0;
-    border-top: 1px solid var(--border);
-    margin-top: 40px;
-    text-align: center;
-    font-size: 12px;
-    color: var(--text-subtle);
-  }
+footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-subtle);
+}
 
-  @media (max-width: 600px) {
-    main { padding: 16px 16px 60px; }
-    .card { padding: 18px; }
-    .predators-card { padding: 20px; }
-    .summary-card { padding: 24px; }
-    .kpi-value { font-size: 26px; }
-  }
-</script>
+@media (max-width: 600px) {
+  main { padding: 16px 16px 60px; }
+  .card { padding: 18px; }
+  .predators-card { padding: 20px; }
+  .summary-card { padding: 24px; }
+  .kpi-value { font-size: 26px; }
+}
+</style>
 </head>
 <body>
 <div id="app"></div>
@@ -593,10 +549,8 @@
    CONSTANTS & DATA
    ========================================================= */
 
-// Средние показатели сети из исходной таблицы (строка "Итого")
 const OVERALL_AVG = { jul: 0.93, aug: 0.90 };
 
-// Эффективность отделов по месяцам
 const DEPARTMENTS = [
   { name: "Аптека", jul: 2.04, aug: 1.87 },
   { name: "Парфюм (Люкс)", jul: 1.69, aug: 1.83 },
@@ -617,7 +571,6 @@ const DEPARTMENTS = [
   { name: "Электроприборы", jul: 0.25, aug: 0.19 }
 ];
 
-// Лидеры и аутсайдеры по отделам
 const DEPT_BRANDS = {
   "Бренды Азия": {
     leaders: [
@@ -862,512 +815,6 @@ const DEPT_BRANDS = {
   }
 };
 
-// Данные для scatter-графиков по отделам (все бренды из отчёта)
-const SHEET_DATA = [
-  // Бренды Азия
-  { dept: "Бренды Азия", brand: "Celimax", eff: 6.55, shelves: 6 },
-  { dept: "Бренды Азия", brand: "Round Lab", eff: 3.45, shelves: 10 },
-  { dept: "Бренды Азия", brand: "ANUA", eff: 3.19, shelves: 5 },
-  { dept: "Бренды Азия", brand: "VT", eff: 2.84, shelves: 5 },
-  { dept: "Бренды Азия", brand: "Skin1004", eff: 2.67, shelves: 5 },
-  { dept: "Бренды Азия", brand: "SUR.MEDIC+", eff: 2.50, shelves: 1 },
-  { dept: "Бренды Азия", brand: "Mamonde", eff: 2.19, shelves: 2 },
-  { dept: "Бренды Азия", brand: "Medicube", eff: 2.07, shelves: 3 },
-  { dept: "Бренды Азия", brand: "ERBORIAN", eff: 1.81, shelves: 10 },
-  { dept: "Бренды Азия", brand: "Limoni", eff: 1.70, shelves: 5 },
-  { dept: "Бренды Азия", brand: "Yadah", eff: 1.72, shelves: 10 },
-  { dept: "Бренды Азия", brand: "Cosworker", eff: 1.50, shelves: 3 },
-  { dept: "Бренды Азия", brand: "Pyunkang Yul", eff: 1.42, shelves: 10 },
-  { dept: "Бренды Азия", brand: "Heimish", eff: 1.35, shelves: 4 },
-  { dept: "Бренды Азия", brand: "Missha", eff: 1.34, shelves: 10 },
-  { dept: "Бренды Азия", brand: "ORJENA", eff: 1.28, shelves: 10 },
-  { dept: "Бренды Азия", brand: "SOME BY MI", eff: 1.18, shelves: 2 },
-  { dept: "Бренды Азия", brand: "andplus", eff: 1.10, shelves: 4 },
-  { dept: "Бренды Азия", brand: "BY WISHTREND", eff: 1.04, shelves: 2 },
-  { dept: "Бренды Азия", brand: "ma:nyo", eff: 0.99, shelves: 10 },
-  { dept: "Бренды Азия", brand: "NEEDLY", eff: 0.93, shelves: 5 },
-  { dept: "Бренды Азия", brand: "thinkco", eff: 0.87, shelves: 5 },
-  { dept: "Бренды Азия", brand: "Neulii", eff: 0.82, shelves: 2 },
-  { dept: "Бренды Азия", brand: "Jigott", eff: 0.73, shelves: 8 },
-  { dept: "Бренды Азия", brand: "JMsolution", eff: 0.68, shelves: 5 },
-  { dept: "Бренды Азия", brand: "Holika Holika", eff: 0.61, shelves: 5 },
-  { dept: "Бренды Азия", brand: "Neogen", eff: 0.59, shelves: 10 },
-  { dept: "Бренды Азия", brand: "Elizavecca", eff: 0.59, shelves: 10 },
-  { dept: "Бренды Азия", brand: "SCINIC", eff: 0.59, shelves: 5 },
-  { dept: "Бренды Азия", brand: "Innisfree", eff: 0.54, shelves: 5 },
-  { dept: "Бренды Азия", brand: "Cosrx", eff: 0.52, shelves: 10 },
-  { dept: "Бренды Азия", brand: "True Island", eff: 0.51, shelves: 2 },
-  { dept: "Бренды Азия", brand: "DUFT & DOFT", eff: 0.53, shelves: 5 },
-  { dept: "Бренды Азия", brand: "Name Skin Care", eff: 0.63, shelves: 3 },
-  { dept: "Бренды Азия", brand: "BIODANCE", eff: 0.55, shelves: 3 },
-  { dept: "Бренды Азия", brand: "CONSLY", eff: 0.40, shelves: 5 },
-  { dept: "Бренды Азия", brand: "AXIS-Y", eff: 0.40, shelves: 2 },
-  { dept: "Бренды Азия", brand: "Dear, klairs", eff: 0.39, shelves: 5 },
-  { dept: "Бренды Азия", brand: "ILLIYOON", eff: 0.37, shelves: 3 },
-  { dept: "Бренды Азия", brand: "Farm Stay", eff: 0.34, shelves: 5 },
-  { dept: "Бренды Азия", brand: "GO TAPA", eff: 0.34, shelves: 20 },
-  { dept: "Бренды Азия", brand: "Frudia", eff: 0.33, shelves: 10 },
-  { dept: "Бренды Азия", brand: "Beauty of Joseon", eff: 0.32, shelves: 3 },
-  { dept: "Бренды Азия", brand: "Lion", eff: 0.32, shelves: 1 },
-  { dept: "Бренды Азия", brand: "NUNKORO", eff: 0.30, shelves: 8 },
-  { dept: "Бренды Азия", brand: "MIGUHARA", eff: 0.30, shelves: 5 },
-  { dept: "Бренды Азия", brand: "MENOMOSO", eff: 0.29, shelves: 3 },
-  { dept: "Бренды Азия", brand: "Shary", eff: 0.29, shelves: 5 },
-  { dept: "Бренды Азия", brand: "Huxley", eff: 0.28, shelves: 3 },
-  { dept: "Бренды Азия", brand: "NACIFIC", eff: 0.28, shelves: 3 },
-  { dept: "Бренды Азия", brand: "MEDB", eff: 0.28, shelves: 2 },
-  { dept: "Бренды Азия", brand: "PSLAB", eff: 0.27, shelves: 5 },
-  { dept: "Бренды Азия", brand: "ongredients", eff: 0.21, shelves: 3 },
-  { dept: "Бренды Азия", brand: "LUVUM", eff: 0.22, shelves: 4 },
-  { dept: "Бренды Азия", brand: "IsNtree", eff: 0.24, shelves: 5 },
-  { dept: "Бренды Азия", brand: "TOCOBO", eff: 0.24, shelves: 2 },
-  { dept: "Бренды Азия", brand: "Benton", eff: 0.22, shelves: 3 },
-  { dept: "Бренды Азия", brand: "HADA LABO", eff: 0.38, shelves: 3 },
-  { dept: "Бренды Азия", brand: "NARIS", eff: 0.25, shelves: 1 },
-  { dept: "Бренды Азия", brand: "MISTIC", eff: 0.19, shelves: 3 },
-  { dept: "Бренды Азия", brand: "Mixsoon", eff: 0.17, shelves: 9 },
-  { dept: "Бренды Азия", brand: "Arencia", eff: 0.18, shelves: 4 },
-  { dept: "Бренды Азия", brand: "RNW", eff: 0.15, shelves: 6 },
-  { dept: "Бренды Азия", brand: "DERMAL", eff: 0.10, shelves: 3 },
-  { dept: "Бренды Азия", brand: "YBK", eff: 0.09, shelves: 2 },
-  { dept: "Бренды Азия", brand: "La Miso", eff: 0.11, shelves: 2 },
-  { dept: "Бренды Азия", brand: "TORRIDEN", eff: 0.11, shelves: 2 },
-  { dept: "Бренды Азия", brand: "Mizon", eff: 0.13, shelves: 3 },
-  { dept: "Бренды Азия", brand: "MENTHOLATUM", eff: 0.05, shelves: 2 },
-  { dept: "Бренды Азия", brand: "DR.F5", eff: 0.04, shelves: 2 },
-  { dept: "Бренды Азия", brand: "SADOER", eff: 0.04, shelves: 1 },
-  { dept: "Бренды Азия", brand: "Parnell", eff: 0.04, shelves: 4 },
-  { dept: "Бренды Азия", brand: "SUNDUK", eff: 0.03, shelves: 2 },
-  { dept: "Бренды Азия", brand: "S.NATURE", eff: 0.03, shelves: 3 },
-  { dept: "Бренды Азия", brand: "MOMO PURI", eff: 0.01, shelves: 1 },
-  { dept: "Бренды Азия", brand: "I'M FROM", eff: 0.06, shelves: 5 },
-  { dept: "Бренды Азия", brand: "Hersteller", eff: 0.06, shelves: 3 },
-  // Аптека
-  { dept: "Аптека", brand: "Bioderma", eff: 5.18, shelves: 5 },
-  { dept: "Аптека", brand: "La Roche-Posay", eff: 1.33, shelves: 12 },
-  { dept: "Аптека", brand: "Vichy", eff: 1.07, shelves: 12 },
-  { dept: "Аптека", brand: "Eucerin", eff: 0.73, shelves: 5 },
-  { dept: "Аптека", brand: "Uriage", eff: 0.61, shelves: 6 },
-  { dept: "Аптека", brand: "EAU THERMALE AVENE", eff: 0.42, shelves: 6 },
-  { dept: "Аптека", brand: "SVR", eff: 0.35, shelves: 10 },
-  { dept: "Аптека", brand: "Ducray", eff: 0.37, shelves: 3 },
-  { dept: "Аптека", brand: "Topicrem", eff: 0.23, shelves: 3 },
-  { dept: "Аптека", brand: "A-Derma", eff: 0.17, shelves: 2 },
-  { dept: "Аптека", brand: "AESTURA", eff: 0.08, shelves: 4 },
-  { dept: "Аптека", brand: "Zeroid", eff: 0.08, shelves: 2 },
-  // Декор
-  { dept: "Декор", brand: "LUXVISAGE", eff: 5.81, shelves: 2 },
-  { dept: "Декор", brand: "Vivienne Sabo", eff: 3.46, shelves: 5 },
-  { dept: "Декор", brand: "L'Oreal Paris", eff: 3.01, shelves: 5 },
-  { dept: "Декор", brand: "Catrice", eff: 2.86, shelves: 5 },
-  { dept: "Декор", brand: "INFLUENCE beauty", eff: 2.62, shelves: 5 },
-  { dept: "Декор", brand: "essence", eff: 2.57, shelves: 5 },
-  { dept: "Декор", brand: "PUSY", eff: 2.25, shelves: 5 },
-  { dept: "Декор", brand: "Divage", eff: 1.87, shelves: 5 },
-  { dept: "Декор", brand: "RAD", eff: 1.50, shelves: 5 },
-  { dept: "Декор", brand: "ART-VISAGE", eff: 1.50, shelves: 5 },
-  { dept: "Декор", brand: "Belor Design", eff: 1.53, shelves: 3 },
-  { dept: "Декор", brand: "SHIKstudio", eff: 1.39, shelves: 10 },
-  { dept: "Декор", brand: "Lic", eff: 1.37, shelves: 3 },
-  { dept: "Декор", brand: "LUNA", eff: 1.24, shelves: 4 },
-  { dept: "Декор", brand: "Holika Holika", eff: 1.01, shelves: 3 },
-  { dept: "Декор", brand: "MIXIT", eff: 1.08, shelves: 5 },
-  { dept: "Декор", brand: "Stellary", eff: 0.90, shelves: 5 },
-  { dept: "Декор", brand: "Pupa", eff: 0.86, shelves: 5 },
-  { dept: "Декор", brand: "Estrade", eff: 0.84, shelves: 5 },
-  { dept: "Декор", brand: "SHU", eff: 0.78, shelves: 5 },
-  { dept: "Декор", brand: "Relouis", eff: 0.79, shelves: 5 },
-  { dept: "Декор", brand: "Eveline", eff: 0.69, shelves: 5 },
-  { dept: "Декор", brand: "Love Generation", eff: 0.66, shelves: 5 },
-  { dept: "Декор", brand: "andplus", eff: 0.61, shelves: 1 },
-  { dept: "Декор", brand: "Beauty Bomb", eff: 0.61, shelves: 5 },
-  { dept: "Декор", brand: "Limoni", eff: 0.61, shelves: 5 },
-  { dept: "Декор", brand: "ELIAN RUSSIA", eff: 0.60, shelves: 4 },
-  { dept: "Декор", brand: "MakeUp Revolution", eff: 0.64, shelves: 5 },
-  { dept: "Декор", brand: "Manly PRO", eff: 0.55, shelves: 10 },
-  { dept: "Декор", brand: "LArte del Bello", eff: 0.49, shelves: 5 },
-  { dept: "Декор", brand: "Naj Oleari", eff: 0.49, shelves: 5 },
-  { dept: "Декор", brand: "ninelle", eff: 0.48, shelves: 5 },
-  { dept: "Декор", brand: "TIRTIR", eff: 0.46, shelves: 5 },
-  { dept: "Декор", brand: "Clio", eff: 0.54, shelves: 5 },
-  { dept: "Декор", brand: "DEAR DAHLIA", eff: 0.42, shelves: 5 },
-  { dept: "Декор", brand: "SEVEN7EEN", eff: 0.38, shelves: 5 },
-  { dept: "Декор", brand: "ARIVE MAKEUP", eff: 0.30, shelves: 5 },
-  { dept: "Декор", brand: "Max Factor", eff: 0.26, shelves: 5 },
-  { dept: "Декор", brand: "AGE 20s", eff: 0.23, shelves: 4 },
-  { dept: "Декор", brand: "Bourjois", eff: 0.21, shelves: 5 },
-  { dept: "Декор", brand: "Chupa Chups", eff: 0.20, shelves: 2 },
-  { dept: "Декор", brand: "FUNKY MONKEY", eff: 0.17, shelves: 5 },
-  { dept: "Декор", brand: "GO TAPA", eff: 0.17, shelves: 2 },
-  { dept: "Декор", brand: "Artdeco", eff: 0.13, shelves: 5 },
-  { dept: "Декор", brand: "Rom&nd", eff: 0.12, shelves: 1 },
-  { dept: "Декор", brand: "NOTE", eff: 0.12, shelves: 5 },
-  { dept: "Декор", brand: "Make Up Factory", eff: 0.11, shelves: 5 },
-  { dept: "Декор", brand: "Thim", eff: 0.06, shelves: 5 },
-  { dept: "Декор", brand: "SMART BABY", eff: 0.07, shelves: 5 },
-  { dept: "Декор", brand: "Eva Mosaic", eff: 0.02, shelves: 5 },
-  { dept: "Декор", brand: "SIMIHAZE", eff: 0.01, shelves: 5 },
-  // Масс-маркет (ключевые)
-  { dept: "Масс-маркет", brand: "For me by gold apple (Вата)", eff: 14.25, shelves: 1 },
-  { dept: "Масс-маркет", brand: "Intimly", eff: 11.23, shelves: 1 },
-  { dept: "Масс-маркет", brand: "Kotex", eff: 6.05, shelves: 1 },
-  { dept: "Масс-маркет", brand: "Biorepair", eff: 4.58, shelves: 2 },
-  { dept: "Масс-маркет", brand: "Lenor", eff: 3.90, shelves: 1 },
-  { dept: "Масс-маркет", brand: "R.O.C.S.", eff: 3.77, shelves: 1 },
-  { dept: "Масс-маркет", brand: "For me by gold apple (Маски)", eff: 3.64, shelves: 1 },
-  { dept: "Масс-маркет", brand: "Lactacyd", eff: 3.42, shelves: 1 },
-  { dept: "Масс-маркет", brand: "EAT MY", eff: 3.21, shelves: 1 },
-  { dept: "Масс-маркет", brand: "Tesori d'Oriente (Хоз)", eff: 2.95, shelves: 2 },
-  { dept: "Масс-маркет", brand: "EVO laboratoires", eff: 2.86, shelves: 1 },
-  { dept: "Масс-маркет", brand: "Гельтек (Солнцезащита)", eff: 2.87, shelves: 1 },
-  { dept: "Масс-маркет", brand: "Longa Vita", eff: 2.82, shelves: 1 },
-  { dept: "Масс-маркет", brand: "YIOIY", eff: 2.71, shelves: 1 },
-  { dept: "Масс-маркет", brand: "The U", eff: 2.71, shelves: 1 },
-  { dept: "Масс-маркет", brand: "Corimo", eff: 2.67, shelves: 1 },
-  { dept: "Масс-маркет", brand: "Solzao", eff: 2.43, shelves: 1 },
-  { dept: "Масс-маркет", brand: "VOIS", eff: 2.44, shelves: 1 },
-  { dept: "Масс-маркет", brand: "For me by gold apple (Уход 15п)", eff: 1.38, shelves: 15 },
-  { dept: "Масс-маркет", brand: "MIXIT (Уход 10п)", eff: 1.54, shelves: 10 },
-  { dept: "Масс-маркет", brand: "The Act (Уход 10п)", eff: 1.14, shelves: 10 },
-  { dept: "Масс-маркет", brand: "MASKOHOLIC", eff: 0.14, shelves: 2 },
-  { dept: "Масс-маркет", brand: "7DAYS", eff: 0.07, shelves: 1 },
-  { dept: "Масс-маркет", brand: "Openface", eff: 0.06, shelves: 1 },
-  { dept: "Масс-маркет", brand: "Dear Skin", eff: 0.04, shelves: 1 },
-  // Уход Люкс
-  { dept: "Уход Люкс", brand: "Payot", eff: 4.51, shelves: 10 },
-  { dept: "Уход Люкс", brand: "La Sultane de Saba", eff: 3.69, shelves: 5 },
-  { dept: "Уход Люкс", brand: "Sol de Janeiro", eff: 2.46, shelves: 10 },
-  { dept: "Уход Люкс", brand: "AROMATICA", eff: 2.37, shelves: 2 },
-  { dept: "Уход Люкс", brand: "IOPE", eff: 1.78, shelves: 5 },
-  { dept: "Уход Люкс", brand: "Caudalie", eff: 1.68, shelves: 10 },
-  { dept: "Уход Люкс", brand: "Alma K", eff: 1.25, shelves: 5 },
-  { dept: "Уход Люкс", brand: "Christian Breton", eff: 1.23, shelves: 5 },
-  { dept: "Уход Люкс", brand: "OKOLO", eff: 1.14, shelves: 10 },
-  { dept: "Уход Люкс", brand: "Mytaui", eff: 1.38, shelves: 4 },
-  { dept: "Уход Люкс", brand: "belif", eff: 1.01, shelves: 5 },
-  { dept: "Уход Люкс", brand: "DONT TOUCH MY SKIN", eff: 1.08, shelves: 3 },
-  { dept: "Уход Люкс", brand: "HEMPZ", eff: 0.80, shelves: 5 },
-  { dept: "Уход Люкс", brand: "ELEMIS", eff: 0.57, shelves: 5 },
-  { dept: "Уход Люкс", brand: "Valmont", eff: 0.52, shelves: 6 },
-  { dept: "Уход Люкс", brand: "Rare Paris", eff: 0.52, shelves: 3 },
-  { dept: "Уход Люкс", brand: "OHUI", eff: 0.49, shelves: 6 },
-  { dept: "Уход Люкс", brand: "TALIKA", eff: 0.44, shelves: 4 },
-  { dept: "Уход Люкс", brand: "ANNA SHAROVA", eff: 0.47, shelves: 2 },
-  { dept: "Уход Люкс", brand: "Passion&Beyond", eff: 0.32, shelves: 5 },
-  { dept: "Уход Люкс", brand: "Guam", eff: 0.31, shelves: 5 },
-  { dept: "Уход Люкс", brand: "Lancaster", eff: 0.38, shelves: 4 },
-  { dept: "Уход Люкс", brand: "Toscana Botanica", eff: 0.38, shelves: 3 },
-  { dept: "Уход Люкс", brand: "Minus 417", eff: 0.37, shelves: 5 },
-  { dept: "Уход Люкс", brand: "APIVITA", eff: 0.24, shelves: 5 },
-  { dept: "Уход Люкс", brand: "AMAN", eff: 0.20, shelves: 5 },
-  { dept: "Уход Люкс", brand: "ISA Knox", eff: 0.23, shelves: 4 },
-  { dept: "Уход Люкс", brand: "HEMP CARE", eff: 0.23, shelves: 3 },
-  { dept: "Уход Люкс", brand: "Ligne St. Barth", eff: 0.22, shelves: 5 },
-  { dept: "Уход Люкс", brand: "Thalgo", eff: 0.11, shelves: 5 },
-  { dept: "Уход Люкс", brand: "Ahava", eff: 0.15, shelves: 3 },
-  { dept: "Уход Люкс", brand: "Comfort zone", eff: 0.14, shelves: 6 },
-  { dept: "Уход Люкс", brand: "Grown Alchemist", eff: 0.11, shelves: 5 },
-  { dept: "Уход Люкс", brand: "KWC", eff: 0.10, shelves: 3 },
-  { dept: "Уход Люкс", brand: "Omorovicza", eff: 0.08, shelves: 5 },
-  { dept: "Уход Люкс", brand: "BABOR", eff: 0.27, shelves: 12 },
-  { dept: "Уход Люкс", brand: "Rexaline", eff: 0.03, shelves: 2 },
-  // Нишевая парфюмерия
-  { dept: "Нишевая парфюмерия", brand: "ESSENTIAL PARFUMS PARIS", eff: 6.41, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "SIGNATURE BY SILLAGE", eff: 2.53, shelves: 2 },
-  { dept: "Нишевая парфюмерия", brand: "THOMAS KOSMALA", eff: 2.49, shelves: 3 },
-  { dept: "Нишевая парфюмерия", brand: "Marc-Antoine Barrois", eff: 1.89, shelves: 2 },
-  { dept: "Нишевая парфюмерия", brand: "Byredo", eff: 1.71, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "Chopard", eff: 1.63, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "Vilhelm Parfumerie", eff: 1.50, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "THE WOODS COLLECTION", eff: 1.41, shelves: 3 },
-  { dept: "Нишевая парфюмерия", brand: "Juliette has a Gun", eff: 1.24, shelves: 4 },
-  { dept: "Нишевая парфюмерия", brand: "BIRKHOLZ", eff: 0.81, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "Atkinsons", eff: 0.81, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "Amouage", eff: 0.84, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "LATELIER PARFUM", eff: 0.76, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "Parle Moi De Parfum", eff: 0.75, shelves: 3 },
-  { dept: "Нишевая парфюмерия", brand: "LIQUIDES IMAGINAIRES", eff: 0.73, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "Montale", eff: 0.71, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "MFK", eff: 0.69, shelves: 12 },
-  { dept: "Нишевая парфюмерия", brand: "Neydo", eff: 0.69, shelves: 3 },
-  { dept: "Нишевая парфюмерия", brand: "Stereotype", eff: 0.62, shelves: 1 },
-  { dept: "Нишевая парфюмерия", brand: "Xerjoff", eff: 0.59, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "Nobile 1942", eff: 0.52, shelves: 4 },
-  { dept: "Нишевая парфюмерия", brand: "WIDIAN", eff: 0.38, shelves: 3 },
-  { dept: "Нишевая парфюмерия", brand: "MEMO Paris", eff: 0.37, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "State Of Mind", eff: 0.36, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "Tiziana Terenzi", eff: 0.44, shelves: 3 },
-  { dept: "Нишевая парфюмерия", brand: "DESIGNER SHAIK", eff: 0.45, shelves: 2 },
-  { dept: "Нишевая парфюмерия", brand: "Nishane", eff: 0.33, shelves: 3 },
-  { dept: "Нишевая парфюмерия", brand: "Loewe", eff: 0.17, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "Noise", eff: 0.16, shelves: 2 },
-  { dept: "Нишевая парфюмерия", brand: "Acqua di Parma", eff: 0.12, shelves: 6 },
-  { dept: "Нишевая парфюмерия", brand: "Mind Games", eff: 0.12, shelves: 4 },
-  { dept: "Нишевая парфюмерия", brand: "Franck Boclet", eff: 0.06, shelves: 4 },
-  // Парфюм (Люкс)
-  { dept: "Парфюм (Люкс)", brand: "Lacoste", eff: 4.78, shelves: 3 },
-  { dept: "Парфюм (Люкс)", brand: "Dolce & Gabbana", eff: 2.24, shelves: 6 },
-  { dept: "Парфюм (Люкс)", brand: "JIMMY CHOO", eff: 1.63, shelves: 6 },
-  { dept: "Парфюм (Люкс)", brand: "Banderas", eff: 1.62, shelves: 4 },
-  { dept: "Парфюм (Люкс)", brand: "BANANA REPUBLIC", eff: 1.55, shelves: 6 },
-  { dept: "Парфюм (Люкс)", brand: "Lanvin", eff: 1.46, shelves: 3 },
-  { dept: "Парфюм (Люкс)", brand: "ANTINOMIE", eff: 1.47, shelves: 2 },
-  { dept: "Парфюм (Люкс)", brand: "For me by gold apple", eff: 1.40, shelves: 1 },
-  { dept: "Парфюм (Люкс)", brand: "Hugo Boss", eff: 1.14, shelves: 6 },
-  { dept: "Парфюм (Люкс)", brand: "Moschino", eff: 1.10, shelves: 6 },
-  { dept: "Парфюм (Люкс)", brand: "Missoni", eff: 1.18, shelves: 1 },
-  { dept: "Парфюм (Люкс)", brand: "Korres", eff: 1.11, shelves: 2 },
-  { dept: "Парфюм (Люкс)", brand: "Burberry", eff: 1.07, shelves: 4 },
-  { dept: "Парфюм (Люкс)", brand: "Emmanuelle Jane", eff: 1.00, shelves: 2 },
-  { dept: "Парфюм (Люкс)", brand: "RABANNE", eff: 1.21, shelves: 6 },
-  { dept: "Парфюм (Люкс)", brand: "KARL LAGERFELD", eff: 1.24, shelves: 4 },
-  { dept: "Парфюм (Люкс)", brand: "COACH", eff: 0.90, shelves: 4 },
-  { dept: "Парфюм (Люкс)", brand: "Kenzo", eff: 0.97, shelves: 6 },
-  { dept: "Парфюм (Люкс)", brand: "Michael Kors", eff: 0.86, shelves: 3 },
-  { dept: "Парфюм (Люкс)", brand: "Gucci", eff: 0.86, shelves: 6 },
-  { dept: "Парфюм (Люкс)", brand: "Bvlgari", eff: 0.80, shelves: 6 },
-  { dept: "Парфюм (Люкс)", brand: "Carolina Herrera", eff: 0.81, shelves: 6 },
-  { dept: "Парфюм (Люкс)", brand: "Jean Paul Gaultier", eff: 0.77, shelves: 6 },
-  { dept: "Парфюм (Люкс)", brand: "Calvin Klein", eff: 0.59, shelves: 5 },
-  { dept: "Парфюм (Люкс)", brand: "Adidas", eff: 0.60, shelves: 3 },
-  { dept: "Парфюм (Люкс)", brand: "UNITED COLORS OF BENETTON", eff: 0.53, shelves: 2 },
-  { dept: "Парфюм (Люкс)", brand: "ROCHAS", eff: 0.55, shelves: 2 },
-  { dept: "Парфюм (Люкс)", brand: "Chloe", eff: 0.41, shelves: 2 },
-  { dept: "Парфюм (Люкс)", brand: "Nina Ricci", eff: 0.29, shelves: 3 },
-  { dept: "Парфюм (Люкс)", brand: "MANDARINA DUCK", eff: 0.28, shelves: 2 },
-  { dept: "Парфюм (Люкс)", brand: "David Beckham", eff: 0.25, shelves: 1 },
-  { dept: "Парфюм (Люкс)", brand: "Narciso Rodriguez", eff: 0.24, shelves: 6 },
-  { dept: "Парфюм (Люкс)", brand: "Armand Basi", eff: 0.35, shelves: 2 },
-  { dept: "Парфюм (Люкс)", brand: "BON PARFUMEUR PARIS", eff: 0.34, shelves: 6 },
-  { dept: "Парфюм (Люкс)", brand: "Nicolai", eff: 0.11, shelves: 4 },
-  { dept: "Парфюм (Люкс)", brand: "TUMI", eff: 0.11, shelves: 3 },
-  { dept: "Парфюм (Люкс)", brand: "Davidoff", eff: 0.12, shelves: 1 },
-  { dept: "Парфюм (Люкс)", brand: "Marc Jacobs", eff: 0.19, shelves: 2 },
-  // Корнер
-  { dept: "Корнер", brand: "CLARINS PRECIOUS", eff: 5.83, shelves: 1 },
-  { dept: "Корнер", brand: "DARLING", eff: 5.77, shelves: 5 },
-  { dept: "Корнер", brand: "Versace", eff: 3.52, shelves: 4 },
-  { dept: "Корнер", brand: "Clarins", eff: 2.12, shelves: 5 },
-  { dept: "Корнер", brand: "Dior", eff: 1.98, shelves: 5 },
-  { dept: "Корнер", brand: "Zielinski & Rozen", eff: 1.41, shelves: 5 },
-  { dept: "Корнер", brand: "Givenchy", eff: 1.21, shelves: 5 },
-  { dept: "Корнер", brand: "Guerlain", eff: 0.72, shelves: 5 },
-  { dept: "Корнер", brand: "Tom Ford", eff: 0.64, shelves: 5 },
-  { dept: "Корнер", brand: "3INA", eff: 0.65, shelves: 5 },
-  { dept: "Корнер", brand: "Kilian Paris", eff: 0.63, shelves: 5 },
-  { dept: "Корнер", brand: "Estee Lauder", eff: 0.59, shelves: 5 },
-  { dept: "Корнер", brand: "Shiseido", eff: 0.56, shelves: 5 },
-  { dept: "Корнер", brand: "Bobbi Brown", eff: 0.50, shelves: 5 },
-  { dept: "Корнер", brand: "Clinique", eff: 0.45, shelves: 5 },
-  { dept: "Корнер", brand: "Versace Atelier", eff: 0.45, shelves: 3 },
-  { dept: "Корнер", brand: "Sisley", eff: 0.38, shelves: 5 },
-  { dept: "Корнер", brand: "Romanovamakeup", eff: 0.37, shelves: 5 },
-  { dept: "Корнер", brand: "KIKO MILANO", eff: 0.42, shelves: 5 },
-  { dept: "Корнер", brand: "MAKE UP FOR EVER", eff: 0.18, shelves: 5 },
-  { dept: "Корнер", brand: "andplus", eff: 0.20, shelves: 5 },
-  { dept: "Корнер", brand: "Hair Rituel Sisley", eff: 0.08, shelves: 1 },
-  { dept: "Корнер", brand: "La Mer", eff: 0.06, shelves: 5 },
-  // Космецевтика
-  { dept: "Космецевтика", brand: "Institut Esthederm", eff: 2.85, shelves: 5 },
-  { dept: "Космецевтика", brand: "Sesderma", eff: 2.82, shelves: 5 },
-  { dept: "Космецевтика", brand: "MEDI-PEEL", eff: 2.06, shelves: 5 },
-  { dept: "Космецевтика", brand: "Etat Pur", eff: 1.95, shelves: 2 },
-  { dept: "Космецевтика", brand: "Holy Land", eff: 1.62, shelves: 5 },
-  { dept: "Космецевтика", brand: "ALCHEMY CARE", eff: 1.42, shelves: 5 },
-  { dept: "Космецевтика", brand: "KORFF", eff: 1.17, shelves: 5 },
-  { dept: "Космецевтика", brand: "CELLBYCELL", eff: 1.18, shelves: 5 },
-  { dept: "Космецевтика", brand: "Christina", eff: 0.81, shelves: 5 },
-  { dept: "Космецевтика", brand: "Dr. Ceuracle", eff: 0.62, shelves: 5 },
-  { dept: "Космецевтика", brand: "FILORGA", eff: 0.66, shelves: 2 },
-  { dept: "Космецевтика", brand: "Cell Fusion C", eff: 0.58, shelves: 3 },
-  { dept: "Космецевтика", brand: "Janssen Cosmetics", eff: 0.47, shelves: 5 },
-  { dept: "Космецевтика", brand: "Gehwol", eff: 0.40, shelves: 3 },
-  { dept: "Космецевтика", brand: "Skinjestique", eff: 0.39, shelves: 3 },
-  { dept: "Космецевтика", brand: "Sothys", eff: 0.34, shelves: 5 },
-  { dept: "Космецевтика", brand: "Eldan Cosmetics", eff: 0.32, shelves: 3 },
-  { dept: "Космецевтика", brand: "Obagi", eff: 0.29, shelves: 2 },
-  { dept: "Космецевтика", brand: "AMPLE:N", eff: 0.19, shelves: 2 },
-  { dept: "Космецевтика", brand: "ALGOLOGIE", eff: 0.17, shelves: 5 },
-  { dept: "Космецевтика", brand: "KLAPP", eff: 0.14, shelves: 5 },
-  { dept: "Космецевтика", brand: "BIOBALANCE", eff: 0.09, shelves: 5 },
-  // Проф. уход за волосами
-  { dept: "Проф. уход за волосами", brand: "MIXIT", eff: 3.90, shelves: 2 },
-  { dept: "Проф. уход за волосами", brand: "Tashe professional", eff: 3.86, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "Mise en scene", eff: 3.03, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "Limba Cosmetics", eff: 3.02, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "Lador", eff: 2.74, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "LOreal professionnel", eff: 2.40, shelves: 10 },
-  { dept: "Проф. уход за волосами", brand: "MASIL", eff: 2.45, shelves: 4 },
-  { dept: "Проф. уход за волосами", brand: "Kerasys", eff: 2.24, shelves: 2 },
-  { dept: "Проф. уход за волосами", brand: "TIGI Bed Head", eff: 1.86, shelves: 4 },
-  { dept: "Проф. уход за волосами", brand: "LOreal Paris", eff: 1.86, shelves: 2 },
-  { dept: "Проф. уход за волосами", brand: "DARLING", eff: 1.93, shelves: 1 },
-  { dept: "Проф. уход за волосами", brand: "Matrix", eff: 1.63, shelves: 6 },
-  { dept: "Проф. уход за волосами", brand: "Garnier", eff: 1.40, shelves: 1 },
-  { dept: "Проф. уход за волосами", brand: "Ollin Professional", eff: 1.31, shelves: 10 },
-  { dept: "Проф. уход за волосами", brand: "Monday", eff: 1.38, shelves: 1 },
-  { dept: "Проф. уход за волосами", brand: "PRO SERIES", eff: 1.27, shelves: 1 },
-  { dept: "Проф. уход за волосами", brand: "Кудрявый метод", eff: 1.19, shelves: 2 },
-  { dept: "Проф. уход за волосами", brand: "Тресемме", eff: 1.15, shelves: 2 },
-  { dept: "Проф. уход за волосами", brand: "SONO", eff: 1.05, shelves: 5 },
-  { dept: "Проф. уход за волосами", brand: "Likato Professional", eff: 1.03, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "Alerana", eff: 1.06, shelves: 1 },
-  { dept: "Проф. уход за волосами", brand: "ICE by NATURA SIBERICA", eff: 1.10, shelves: 5 },
-  { dept: "Проф. уход за волосами", brand: "Pantene", eff: 1.11, shelves: 1 },
-  { dept: "Проф. уход за волосами", brand: "ORGANICALS", eff: 0.99, shelves: 5 },
-  { dept: "Проф. уход за волосами", brand: "Davines", eff: 0.89, shelves: 8 },
-  { dept: "Проф. уход за волосами", brand: "Ryo", eff: 0.87, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "Zielinski & Rozen", eff: 0.87, shelves: 1 },
-  { dept: "Проф. уход за волосами", brand: "System 4", eff: 0.86, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "EPICA Professional", eff: 0.83, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "Concept", eff: 0.94, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "ARAVIA Professional", eff: 0.96, shelves: 2 },
-  { dept: "Проф. уход за волосами", brand: "ESTEL", eff: 0.71, shelves: 10 },
-  { dept: "Проф. уход за волосами", brand: "URBAN NATURE", eff: 0.75, shelves: 1 },
-  { dept: "Проф. уход за волосами", brand: "Hair Sekta", eff: 0.69, shelves: 2 },
-  { dept: "Проф. уход за волосами", brand: "CHI", eff: 0.56, shelves: 5 },
-  { dept: "Проф. уход за волосами", brand: "INSIGHT PROFESSIONAL", eff: 0.55, shelves: 5 },
-  { dept: "Проф. уход за волосами", brand: "MONE PROFESSIONAL", eff: 0.54, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "Headspa7", eff: 0.53, shelves: 2 },
-  { dept: "Проф. уход за волосами", brand: "OKOLO", eff: 0.53, shelves: 1 },
-  { dept: "Проф. уход за волосами", brand: "Curly Shyll", eff: 0.49, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "Alfaparf Milano", eff: 0.46, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "HADAT COSMETICS", eff: 0.40, shelves: 5 },
-  { dept: "Проф. уход за волосами", brand: "Oribe", eff: 0.39, shelves: 6 },
-  { dept: "Проф. уход за волосами", brand: "Rated Green", eff: 0.34, shelves: 4 },
-  { dept: "Проф. уход за волосами", brand: "HEDO", eff: 0.33, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "Name Skin Care", eff: 0.34, shelves: 1 },
-  { dept: "Проф. уход за волосами", brand: "KEVIN.MURPHY", eff: 0.30, shelves: 8 },
-  { dept: "Проф. уход за волосами", brand: "AUSSIE", eff: 0.29, shelves: 1 },
-  { dept: "Проф. уход за волосами", brand: "Davroe", eff: 0.26, shelves: 4 },
-  { dept: "Проф. уход за волосами", brand: "Moroccanoil", eff: 0.25, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "Moist Diane", eff: 0.43, shelves: 1 },
-  { dept: "Проф. уход за волосами", brand: "ROSSANO FERRETTI", eff: 0.19, shelves: 2 },
-  { dept: "Проф. уход за волосами", brand: "Leonor Greyl", eff: 0.21, shelves: 2 },
-  { dept: "Проф. уход за волосами", brand: "R+CO", eff: 0.22, shelves: 6 },
-  { dept: "Проф. уход за волосами", brand: "EVO", eff: 0.13, shelves: 3 },
-  { dept: "Проф. уход за волосами", brand: "Aveda", eff: 0.12, shelves: 6 },
-  { dept: "Проф. уход за волосами", brand: "BIOLAGE", eff: 0.09, shelves: 2 },
-  { dept: "Проф. уход за волосами", brand: "KYOCA", eff: 0.10, shelves: 2 },
-  { dept: "Проф. уход за волосами", brand: "RAD", eff: 0.16, shelves: 2 },
-  { dept: "Проф. уход за волосами", brand: "ALLMASIL", eff: 0.02, shelves: 3 },
-  // Органика
-  { dept: "Органика", brand: "Miss Organic", eff: 2.56, shelves: 1 },
-  { dept: "Органика", brand: "Fabrik cosmetology", eff: 2.22, shelves: 2 },
-  { dept: "Органика", brand: "ECOLATIER", eff: 1.76, shelves: 10 },
-  { dept: "Органика", brand: "MiPASSION", eff: 1.69, shelves: 2 },
-  { dept: "Органика", brand: "Рецепты бабушки Агафьи", eff: 1.48, shelves: 4 },
-  { dept: "Органика", brand: "Nudibranches (Орг)", eff: 1.47, shelves: 2 },
-  { dept: "Органика", brand: "Savonry", eff: 1.40, shelves: 3 },
-  { dept: "Органика", brand: "Planeta Organica", eff: 1.37, shelves: 4 },
-  { dept: "Органика", brand: "BOOM SHOP cosmetics", eff: 1.35, shelves: 3 },
-  { dept: "Органика", brand: "LA FLORENTINA", eff: 1.33, shelves: 2 },
-  { dept: "Органика", brand: "Weleda", eff: 1.15, shelves: 5 },
-  { dept: "Органика", brand: "Organic Shop", eff: 1.16, shelves: 3 },
-  { dept: "Органика", brand: "Cafe mimi", eff: 0.91, shelves: 6 },
-  { dept: "Органика", brand: "Synergetic", eff: 0.95, shelves: 4 },
-  { dept: "Органика", brand: "MIXIT (Орг)", eff: 0.92, shelves: 2 },
-  { dept: "Органика", brand: "Natura Siberica", eff: 0.99, shelves: 12 },
-  { dept: "Органика", brand: "Nesti Dante", eff: 0.80, shelves: 2 },
-  { dept: "Органика", brand: "Levrana", eff: 0.76, shelves: 5 },
-  { dept: "Органика", brand: "Yves Rocher", eff: 0.70, shelves: 5 },
-  { dept: "Органика", brand: "SmoRodina", eff: 0.59, shelves: 3 },
-  { dept: "Органика", brand: "Кафе красоты", eff: 0.50, shelves: 2 },
-  { dept: "Органика", brand: "FLORINDA", eff: 0.51, shelves: 4 },
-  { dept: "Органика", brand: "Краснополянская косметика", eff: 0.49, shelves: 3 },
-  { dept: "Органика", brand: "Botavikos", eff: 0.48, shelves: 2 },
-  { dept: "Органика", brand: "Laboratorium", eff: 0.42, shelves: 4 },
-  { dept: "Органика", brand: "Mario Fissi 1937", eff: 0.38, shelves: 1 },
-  { dept: "Органика", brand: "MiKo", eff: 0.32, shelves: 1 },
-  { dept: "Органика", brand: "EO LABORATORIE", eff: 0.16, shelves: 2 },
-  { dept: "Органика", brand: "Bliss Organic", eff: 0.07, shelves: 2 },
-  // БАДы
-  { dept: "БАДы", brand: "NOW", eff: 2.88, shelves: 4 },
-  { dept: "БАДы", brand: "NFO", eff: 2.54, shelves: 2 },
-  { dept: "БАДы", brand: "Первый Живой коллаген", eff: 2.57, shelves: 1 },
-  { dept: "БАДы", brand: "UltraBalance", eff: 2.19, shelves: 2 },
-  { dept: "БАДы", brand: "California Gold Nutrition", eff: 1.81, shelves: 2 },
-  { dept: "БАДы", brand: "Эвалар", eff: 1.70, shelves: 5 },
-  { dept: "БАДы", brand: "BioSil", eff: 1.72, shelves: 1 },
-  { dept: "БАДы", brand: "KWC", eff: 1.64, shelves: 2 },
-  { dept: "БАДы", brand: "Unatuna", eff: 1.63, shelves: 1 },
-  { dept: "БАДы", brand: "Life Extension", eff: 1.60, shelves: 2 },
-  { dept: "БАДы", brand: "Plantago", eff: 1.38, shelves: 1 },
-  { dept: "БАДы", brand: "UNIFORCE", eff: 1.23, shelves: 1 },
-  { dept: "БАДы", brand: "Dr.Zubareva", eff: 1.10, shelves: 4 },
-  { dept: "БАДы", brand: "Жизнивек", eff: 1.09, shelves: 1 },
-  { dept: "БАДы", brand: "Ultrasupps", eff: 1.10, shelves: 1 },
-  { dept: "БАДы", brand: "MISHIDO", eff: 0.97, shelves: 2 },
-  { dept: "БАДы", brand: "GRASSBERG", eff: 0.96, shelves: 2 },
-  { dept: "БАДы", brand: "Jarrow Formulas", eff: 0.92, shelves: 3 },
-  { dept: "БАДы", brand: "ORZAX", eff: 0.93, shelves: 1 },
-  { dept: "БАДы", brand: "Доктор Море", eff: 0.56, shelves: 2 },
-  { dept: "БАДы", brand: "LeafToGo", eff: 0.59, shelves: 3 },
-  { dept: "БАДы", brand: "Orzax Ocean", eff: 0.57, shelves: 5 },
-  { dept: "БАДы", brand: "Vitabiotics", eff: 0.51, shelves: 1 },
-  { dept: "БАДы", brand: "OVER", eff: 0.49, shelves: 2 },
-  { dept: "БАДы", brand: "Doctors Best", eff: 0.49, shelves: 1 },
-  { dept: "БАДы", brand: "Orihiro", eff: 0.45, shelves: 2 },
-  { dept: "БАДы", brand: "Avicenna", eff: 0.43, shelves: 1 },
-  { dept: "БАДы", brand: "Zolten Tabs", eff: 0.39, shelves: 2 },
-  { dept: "БАДы", brand: "1Win", eff: 0.37, shelves: 2 },
-  { dept: "БАДы", brand: "Webber Naturals", eff: 0.36, shelves: 1 },
-  { dept: "БАДы", brand: "Prime Kraft", eff: 0.39, shelves: 1 },
-  { dept: "БАДы", brand: "MRM Nutrition INC", eff: 0.28, shelves: 1 },
-  { dept: "БАДы", brand: "Gold Ration", eff: 0.27, shelves: 1 },
-  { dept: "БАДы", brand: "MAXLER", eff: 0.07, shelves: 2 },
-  { dept: "БАДы", brand: "SCIENCE AND SPORTS", eff: 0.06, shelves: 2 },
-  { dept: "БАДы", brand: "ELEMAX", eff: 0.06, shelves: 2 },
-  { dept: "БАДы", brand: "SDL", eff: 0.06, shelves: 1 },
-  { dept: "БАДы", brand: "Ineldea", eff: 0.08, shelves: 2 },
-  // Мужской уход
-  { dept: "Мужской уход", brand: "AMERICAN CREW", eff: 1.62, shelves: 2 },
-  { dept: "Мужской уход", brand: "KONDOR", eff: 1.52, shelves: 2 },
-  { dept: "Мужской уход", brand: "Boys Toys", eff: 1.37, shelves: 2 },
-  { dept: "Мужской уход", brand: "Proraso", eff: 1.17, shelves: 3 },
-  { dept: "Мужской уход", brand: "BARBARO", eff: 1.15, shelves: 2 },
-  { dept: "Мужской уход", brand: "Morgans", eff: 1.09, shelves: 2 },
-  { dept: "Мужской уход", brand: "NISHMAN", eff: 1.07, shelves: 1 },
-  { dept: "Мужской уход", brand: "Hipster", eff: 1.08, shelves: 2 },
-  { dept: "Мужской уход", brand: "MAN WAY", eff: 0.83, shelves: 1 },
-  { dept: "Мужской уход", brand: "Lock Stock & Barrel", eff: 0.83, shelves: 1 },
-  { dept: "Мужской уход", brand: "Zeitun", eff: 0.45, shelves: 1 },
-  { dept: "Мужской уход", brand: "ACCA KAPPA", eff: 0.41, shelves: 2 },
-  { dept: "Мужской уход", brand: "Limoni", eff: 0.37, shelves: 1 },
-  { dept: "Мужской уход", brand: "Reuzel", eff: 0.23, shelves: 2 },
-  // Расчески
-  { dept: "Расчески", brand: "Tangle Teezer", eff: 2.89, shelves: 1 },
-  { dept: "Расчески", brand: "For me by gold apple", eff: 1.49, shelves: 1 },
-  { dept: "Расчески", brand: "KAIZER", eff: 1.24, shelves: 1 },
-  { dept: "Расчески", brand: "Janeke", eff: 0.94, shelves: 2 },
-  { dept: "Расчески", brand: "MIXIT", eff: 0.85, shelves: 1 },
-  { dept: "Расчески", brand: "Clarette", eff: 0.57, shelves: 1 },
-  { dept: "Расчески", brand: "Zinger", eff: 0.53, shelves: 1 },
-  { dept: "Расчески", brand: "I LOVE MY HAIR", eff: 0.51, shelves: 1 },
-  { dept: "Расчески", brand: "Ollin Professional", eff: 0.35, shelves: 1 },
-  { dept: "Расчески", brand: "Biofriendly", eff: 0.29, shelves: 1 },
-  { dept: "Расчески", brand: "Dewal", eff: 0.14, shelves: 1 },
-  { dept: "Расчески", brand: "RAD", eff: 0.07, shelves: 1 },
-  // Заколки/Резинки
-  { dept: "Заколки/Резинки", brand: "New Look", eff: 2.15, shelves: 1 },
-  { dept: "Заколки/Резинки", brand: "silk lovers", eff: 1.25, shelves: 1 },
-  { dept: "Заколки/Резинки", brand: "For me by gold apple", eff: 1.10, shelves: 1 },
-  { dept: "Заколки/Резинки", brand: "Assoro", eff: 0.63, shelves: 1 },
-  { dept: "Заколки/Резинки", brand: "Biofriendly", eff: 0.52, shelves: 1 },
-  { dept: "Заколки/Резинки", brand: "RAD", eff: 0.06, shelves: 1 },
-  // Техника (Бьюти гаджеты)
-  { dept: "Техника", brand: "FOREO", eff: 1.58, shelves: 5 },
-  { dept: "Техника", brand: "GESS", eff: 1.40, shelves: 4 },
-  { dept: "Техника", brand: "ReadySkin", eff: 0.91, shelves: 1 },
-  { dept: "Техника", brand: "WAU", eff: 0.88, shelves: 4 },
-  { dept: "Техника", brand: "Gezatone", eff: 0.66, shelves: 3 },
-  { dept: "Техника", brand: "Olzori", eff: 0.15, shelves: 2 },
-  // Электроприборы — нет данных по брендам в таблице
-  { dept: "Электроприборы", brand: "Отдел целиком", eff: 0.19, shelves: 1 }
-];
-
-// Пожиратели пространства: KPI < 0.6 и полок >= 5, ИЛИ KPI < 0.8 и полок >= 8
-// Сортировка по "потерям" = (1.0 - KPI) × полок
 const PREDATORS = [
   { brand: "GO TAPA", dept: "Бренды Азия", eff: 0.34, shelves: 20 },
   { brand: "BABOR", dept: "Уход Люкс", eff: 0.27, shelves: 12 },
@@ -1389,10 +836,9 @@ const PREDATORS = [
   { brand: "Nudibranches (ММ Детство)", dept: "Масс-маркет", eff: 0.56, shelves: 8 },
   { brand: "Jigott", dept: "Бренды Азия", eff: 0.73, shelves: 8 },
   { brand: "Aveda", dept: "Проф. уход за волосами", eff: 0.12, shelves: 6 }
-].map(p => ({ ...p, loss: Math.round((1.0 - p.eff) * p.shelves * 100) / 100 }))
-  .sort((a, b) => b.loss - a.loss);
+].map(function(p) { return { ...p, loss: Math.round((1.0 - p.eff) * p.shelves * 100) / 100 }; })
+  .sort(function(a, b) { return b.loss - a.loss; });
 
-// Бренды для ввода — только официально представленные в России и в сети ЗЯ
 const NEW_BRANDS = [
   {
     name: "Laneige",
@@ -1534,7 +980,6 @@ function render() {
   main.appendChild(renderDeptTabs());
   main.appendChild(renderPredators());
   main.appendChild(renderNewBrands());
-  main.appendChild(renderSmallMultiples());
   main.appendChild(renderRoadmap());
   main.appendChild(renderSummary());
   main.appendChild(renderFooter());
@@ -1545,29 +990,14 @@ function render() {
 function renderTopbar() {
   const el = document.createElement("div");
   el.className = "topbar";
-  el.innerHTML = `
-    <div class="brand">
-      <div class="brand-logo">Я</div>
-      <span>Золотое Яблоко · Иркутск</span>
-    </div>
-    <div class="topbar-meta">Отчёт · 20 сентября 2026</div>
-  `;
+  el.innerHTML = '<div class="brand"><div class="brand-logo">Я</div><span>Золотое Яблоко · Иркутск</span></div><div class="topbar-meta">Отчёт · 20 сентября 2026</div>';
   return el;
 }
 
 function renderHero() {
   const el = document.createElement("section");
   el.className = "hero";
-  el.innerHTML = `
-    <span class="hero-eyebrow">Аналитический отчёт</span>
-    <h1>Эффективность полочного пространства: путь к <span class="accent">1.0</span></h1>
-    <p class="hero-sub">Перераспределение 1 м² полочного пространства без дополнительных инвестиций в аренду или ремонт. Данные за июль–август 2026.</p>
-    <div class="hero-meta">
-      <span>Главный мерчандайзер: <strong>Масликова Дарья Владимировна</strong></span>
-      <span>Отдел: <strong>Розничная сеть</strong></span>
-      <span>Цель: <strong>Средний KPI отделов → 1.0</strong></span>
-    </div>
-  `;
+  el.innerHTML = '<span class="hero-eyebrow">Аналитический отчёт</span><h1>Эффективность полочного пространства: путь к <span class="accent">1.0</span></h1><p class="hero-sub">Перераспределение 1 м² полочного пространства без дополнительных инвестиций в аренду или ремонт. Данные за июль–август 2026.</p><div class="hero-meta"><span>Главный мерчандайзер: <strong>Масликова Дарья Владимировна</strong></span><span>Отдел: <strong>Розничная сеть</strong></span><span>Цель: <strong>Средний KPI отделов → 1.0</strong></span></div>';
   return el;
 }
 
@@ -1580,35 +1010,24 @@ function renderKPIs() {
   const delta = (OVERALL_AVG.aug - OVERALL_AVG.jul).toFixed(2);
 
   const kpis = [
-    { label: "Текущий средний KPI", value: current.toFixed(2), delta: `Δ ${delta} к июлю`, cls: "", deltaCls: "neg" },
-    { label: "Целевой показатель", value: "1.00", delta: `+${gap} до цели`, cls: "target", deltaCls: "" },
-    { label: "Отделов выше 1.0", value: `${DEPARTMENTS.filter(d => d.aug >= 1.0).length} / ${DEPARTMENTS.length}`, delta: "драйверы сети", cls: "", deltaCls: "" },
-    { label: "Отделов ниже 0.5", value: `${DEPARTMENTS.filter(d => d.aug < 0.5).length}`, delta: "критическая зона", cls: "", deltaCls: "neg" }
+    { label: "Текущий средний KPI", value: current.toFixed(2), delta: "Δ " + delta + " к июлю", cls: "", deltaCls: "neg" },
+    { label: "Целевой показатель", value: "1.00", delta: "+" + gap + " до цели", cls: "target", deltaCls: "" },
+    { label: "Отделов выше 1.0", value: DEPARTMENTS.filter(function(d){ return d.aug >= 1.0; }).length + " / " + DEPARTMENTS.length, delta: "драйверы сети", cls: "", deltaCls: "" },
+    { label: "Отделов ниже 0.5", value: DEPARTMENTS.filter(function(d){ return d.aug < 0.5; }).length, delta: "критическая зона", cls: "", deltaCls: "neg" }
   ];
 
-  kpis.forEach(k => {
+  kpis.forEach(function(k) {
     const card = document.createElement("div");
     card.className = "kpi" + (k.cls ? " " + k.cls : "");
-    card.innerHTML = `
-      <div class="kpi-label">${k.label}</div>
-      <div class="kpi-value">${k.value}</div>
-      <div class="kpi-delta ${k.deltaCls}">${k.delta}</div>
-    `;
+    card.innerHTML = '<div class="kpi-label">' + k.label + '</div><div class="kpi-value">' + k.value + '</div><div class="kpi-delta ' + k.deltaCls + '">' + k.delta + '</div>';
     el.appendChild(card);
   });
   return el;
 }
 
-/* ----- Bar chart отделов ----- */
 function renderDeptChart() {
   const wrap = document.createElement("section");
-  wrap.innerHTML = `
-    <div class="section-head">
-      <div class="section-eyebrow">Макро-уровень</div>
-      <h2 class="section-title">Эффективность отделов</h2>
-      <p class="section-desc">Средневзвешенный KPI товарооборота по отделам за август 2026. Красная линия — целевой показатель 1.0.</p>
-    </div>
-  `;
+  wrap.innerHTML = '<div class="section-head"><div class="section-eyebrow">Макро-уровень</div><h2 class="section-title">Эффективность отделов</h2><p class="section-desc">Средневзвешенный KPI товарооборота по отделам за август 2026. Красная линия — целевой показатель 1.0.</p></div>';
   const card = document.createElement("div");
   card.className = "card";
   const chartWrap = document.createElement("div");
@@ -1622,46 +1041,44 @@ function renderDeptChart() {
 
   const legend = document.createElement("div");
   legend.className = "legend";
-  legend.innerHTML = 
-    '<div class="legend-item"><span class="legend-swatch" style="background:#c5f04b"></span>Выше 1.0 (драйверы)</div>' +
-    '<div class="legend-item"><span class="legend-swatch" style="background:#fbbf24"></span>0.7 – 1.0 (середина)</div>' +
-    '<div class="legend-item"><span class="legend-swatch" style="background:#f87171"></span>Ниже 0.7 (аутсайдеры)</div>' +
-    '<div class="legend-item"><span class="legend-swatch" style="background:#09090b;height:2px;width:14px;border-radius:0"></span>Цель 1.0</div>';
+  legend.innerHTML = '<div class="legend-item"><span class="legend-swatch" style="background:#c5f04b"></span>Выше 1.0 (драйверы)</div><div class="legend-item"><span class="legend-swatch" style="background:#fbbf24"></span>0.7 – 1.0 (середина)</div><div class="legend-item"><span class="legend-swatch" style="background:#f87171"></span>Ниже 0.7 (аутсайдеры)</div><div class="legend-item"><span class="legend-swatch" style="background:#09090b;height:2px;width:14px;border-radius:0"></span>Цель 1.0</div>';
   card.appendChild(legend);
   wrap.appendChild(card);
-  
-  requestAnimationFrame(() => drawDeptChart(canvas));
+
+  requestAnimationFrame(function() { drawDeptChart(canvas); });
   return wrap;
 }
 
 function drawDeptChart(canvas) {
-  const dpr = window.devicePixelRatio || 1;
-  const data = [...DEPARTMENTS].sort((a,b) => b.aug - a.aug);
-  const maxVal = Math.max(...data.map(d => d.aug), 2.2);
+  var dpr = window.devicePixelRatio || 1;
+  var data = DEPARTMENTS.slice().sort(function(a,b){ return b.aug - a.aug; });
+  var maxVal = Math.max.apply(null, data.map(function(d){ return d.aug; }));
+  if (maxVal < 2.2) maxVal = 2.2;
 
-  const rowH = 30;
-  const padL = 200, padR = 50, padT = 20, padB = 30;
-  const W = Math.max(640, canvas.parentElement.clientWidth);
-  const H = padT + padB + data.length * rowH;
+  var rowH = 30;
+  var padL = 200, padR = 50, padT = 20, padB = 30;
+  var W = Math.max(640, canvas.parentElement.clientWidth);
+  var H = padT + padB + data.length * rowH;
 
   canvas.width = W * dpr;
   canvas.height = H * dpr;
   canvas.style.width = W + "px";
   canvas.style.height = H + "px";
 
-  const ctx = canvas.getContext("2d");
+  var ctx = canvas.getContext("2d");
   ctx.scale(dpr, dpr);
   ctx.clearRect(0, 0, W, H);
 
-  const chartW = W - padL - padR;
+  var chartW = W - padL - padR;
 
   ctx.strokeStyle = "#e4e4e7";
   ctx.lineWidth = 1;
   ctx.font = "11px -apple-system, system-ui, sans-serif";
   ctx.fillStyle = "#a1a1aa";
   ctx.textAlign = "center";
-  for (let v = 0; v <= maxVal; v += 0.5) {
-    const x = padL + (v / maxVal) * chartW;
+  var v;
+  for (v = 0; v <= maxVal; v += 0.5) {
+    var x = padL + (v / maxVal) * chartW;
     ctx.beginPath();
     ctx.moveTo(x, padT);
     ctx.lineTo(x, H - padB);
@@ -1669,7 +1086,7 @@ function drawDeptChart(canvas) {
     if (v % 1 === 0) ctx.fillText(v.toFixed(1), x, H - padB + 14);
   }
 
-  const targetX = padL + (1.0 / maxVal) * chartW;
+  var targetX = padL + (1.0 / maxVal) * chartW;
   ctx.strokeStyle = "#09090b";
   ctx.lineWidth = 1.5;
   ctx.setLineDash([4, 4]);
@@ -1679,22 +1096,22 @@ function drawDeptChart(canvas) {
   ctx.stroke();
   ctx.setLineDash([]);
 
-  data.forEach((d, i) => {
-    const val = d.aug;
-    const y = padT + i * rowH;
-    const bw = (val / maxVal) * chartW;
+  data.forEach(function(d, i) {
+    var val = d.aug;
+    var y = padT + i * rowH;
+    var bw = (val / maxVal) * chartW;
 
     ctx.fillStyle = "#09090b";
     ctx.textAlign = "right";
     ctx.font = "12px -apple-system, system-ui, sans-serif";
     ctx.fillText(d.name, padL - 10, y + rowH / 2 + 4);
 
-    let color = "#f87171";
+    var color = "#f87171";
     if (val >= 1.0) color = "#c5f04b";
     else if (val >= 0.7) color = "#fbbf24";
 
     ctx.fillStyle = color;
-    const barH = rowH - 10;
+    var barH = rowH - 10;
     roundRect(ctx, padL, y + 5, Math.max(2, bw), barH, 4);
     ctx.fill();
 
@@ -1705,70 +1122,63 @@ function drawDeptChart(canvas) {
   });
 }
 
-/* ----- Grouped bar chart динамики ----- */
 function renderDynamicsChart() {
-  const wrap = document.createElement("section");
-  wrap.innerHTML = `
-    <div class="section-head">
-      <div class="section-eyebrow">Динамика</div>
-      <h2 class="section-title">Сравнение июля и августа по отделам</h2>
-      <p class="section-desc">Гистограмма эффективности всех 17 отделов в разрезе двух месяцев. Видно, какие отделы растут, а какие проседают.</p>
-    </div>
-  `;
-  const card = document.createElement("div");
+  var wrap = document.createElement("section");
+  wrap.innerHTML = '<div class="section-head"><div class="section-eyebrow">Динамика</div><h2 class="section-title">Сравнение июля и августа по отделам</h2><p class="section-desc">Гистограмма эффективности всех 17 отделов в разрезе двух месяцев. Видно, какие отделы растут, а какие проседают.</p></div>';
+  var card = document.createElement("div");
   card.className = "card";
-  const chartWrap = document.createElement("div");
+  var chartWrap = document.createElement("div");
   chartWrap.className = "chart-wrap";
-  const canvas = document.createElement("canvas");
+  var canvas = document.createElement("canvas");
   canvas.id = "dynChart";
   canvas.setAttribute("role", "img");
   canvas.setAttribute("aria-label", "Гистограмма динамики отделов");
   chartWrap.appendChild(canvas);
   card.appendChild(chartWrap);
 
-  const legend = document.createElement("div");
+  var legend = document.createElement("div");
   legend.className = "legend";
-  legend.innerHTML = `
-    <div class="legend-item"><span class="legend-swatch" style="background:#a8d83a"></span>Июль</div>
-    <div class="legend-item"><span class="legend-swatch" style="background:#09090b"></span>Август</div>
-    <div class="legend-item"><span class="legend-swatch" style="background:#09090b;height:2px;width:14px;border-radius:0"></span>Цель 1.0</div>
-  `;
+  legend.innerHTML = '<div class="legend-item"><span class="legend-swatch" style="background:#a8d83a"></span>Июль</div><div class="legend-item"><span class="legend-swatch" style="background:#09090b"></span>Август</div><div class="legend-item"><span class="legend-swatch" style="background:#09090b;height:2px;width:14px;border-radius:0"></span>Цель 1.0</div>';
   card.appendChild(legend);
   wrap.appendChild(card);
 
-  requestAnimationFrame(() => drawDynChart(canvas));
+  requestAnimationFrame(function() { drawDynChart(canvas); });
   return wrap;
 }
 
 function drawDynChart(canvas) {
-  const dpr = window.devicePixelRatio || 1;
-  const data = [...DEPARTMENTS].sort((a,b) => b.aug - a.aug);
-  const maxVal = Math.max(...data.flatMap(d => [d.jul, d.aug]), 2.2);
+  var dpr = window.devicePixelRatio || 1;
+  var data = DEPARTMENTS.slice().sort(function(a,b){ return b.aug - a.aug; });
+  var maxVal = 2.2;
+  var i, v;
+  for (i = 0; i < data.length; i++) {
+    if (data[i].jul > maxVal) maxVal = data[i].jul;
+    if (data[i].aug > maxVal) maxVal = data[i].aug;
+  }
 
-  const padL = 50, padR = 20, padT = 20, padB = 120;
-  const barGroupW = 44;
-  const W = Math.max(640, padL + padR + data.length * barGroupW);
-  const H = 420;
+  var padL = 50, padR = 20, padT = 20, padB = 120;
+  var barGroupW = 44;
+  var W = Math.max(640, padL + padR + data.length * barGroupW);
+  var H = 420;
   canvas.width = W * dpr;
   canvas.height = H * dpr;
   canvas.style.width = W + "px";
   canvas.style.height = H + "px";
 
-  const ctx = canvas.getContext("2d");
+  var ctx = canvas.getContext("2d");
   ctx.scale(dpr, dpr);
   ctx.clearRect(0, 0, W, H);
 
-  const chartW = W - padL - padR;
-  const chartH = H - padT - padB;
+  var chartW = W - padL - padR;
+  var chartH = H - padT - padB;
 
-  // Grid
   ctx.strokeStyle = "#e4e4e7";
   ctx.lineWidth = 1;
   ctx.font = "11px -apple-system, system-ui, sans-serif";
   ctx.fillStyle = "#a1a1aa";
   ctx.textAlign = "right";
-  for (let v = 0; v <= maxVal; v += 0.5) {
-    const y = padT + chartH - (v / maxVal) * chartH;
+  for (v = 0; v <= maxVal; v += 0.5) {
+    var y = padT + chartH - (v / maxVal) * chartH;
     ctx.beginPath();
     ctx.moveTo(padL, y);
     ctx.lineTo(padL + chartW, y);
@@ -1776,8 +1186,7 @@ function drawDynChart(canvas) {
     ctx.fillText(v.toFixed(1), padL - 8, y + 4);
   }
 
-  // Target line
-  const targetY = padT + chartH - (1.0 / maxVal) * chartH;
+  var targetY = padT + chartH - (1.0 / maxVal) * chartH;
   ctx.strokeStyle = "#09090b";
   ctx.setLineDash([4, 4]);
   ctx.lineWidth = 1.5;
@@ -1787,27 +1196,23 @@ function drawDynChart(canvas) {
   ctx.stroke();
   ctx.setLineDash([]);
 
-  // Bars
-  const groupW = chartW / data.length;
-  const barW = groupW * 0.35;
-  const gap = 2;
+  var groupW = chartW / data.length;
+  var barW = groupW * 0.35;
+  var gap = 2;
 
-  data.forEach((d, i) => {
-    const gx = padL + i * groupW + groupW / 2;
+  data.forEach(function(d, i) {
+    var gx = padL + i * groupW + groupW / 2;
 
-    // July bar
-    const jh = (d.jul / maxVal) * chartH;
+    var jh = (d.jul / maxVal) * chartH;
     ctx.fillStyle = "#a8d83a";
     roundRect(ctx, gx - barW - gap/2, padT + chartH - jh, barW, jh, 3);
     ctx.fill();
 
-    // August bar
-    const ah = (d.aug / maxVal) * chartH;
+    var ah = (d.aug / maxVal) * chartH;
     ctx.fillStyle = "#09090b";
     roundRect(ctx, gx + gap/2, padT + chartH - ah, barW, ah, 3);
     ctx.fill();
 
-    // X label (rotated)
     ctx.save();
     ctx.translate(gx, padT + chartH + 10);
     ctx.rotate(-Math.PI / 3);
@@ -1819,32 +1224,25 @@ function drawDynChart(canvas) {
   });
 }
 
-/* ----- Dept tabs (compact) ----- */
 function renderDeptTabs() {
-  const wrap = document.createElement("section");
-  wrap.innerHTML = `
-    <div class="section-head">
-      <div class="section-eyebrow">Микро-уровень</div>
-      <h2 class="section-title">Лидеры и аутсайдеры по отделам</h2>
-      <p class="section-desc">Выберите отдел, чтобы увидеть бренды с максимальной и минимальной отдачей на полку.</p>
-    </div>
-  `;
+  var wrap = document.createElement("section");
+  wrap.innerHTML = '<div class="section-head"><div class="section-eyebrow">Микро-уровень</div><h2 class="section-title">Лидеры и аутсайдеры по отделам</h2><p class="section-desc">Выберите отдел, чтобы увидеть бренды с максимальной и минимальной отдачей на полку.</p></div>';
 
-  const card = document.createElement("div");
+  var card = document.createElement("div");
   card.className = "card";
 
-  const tabs = document.createElement("div");
+  var tabs = document.createElement("div");
   tabs.className = "tabs";
   tabs.setAttribute("role", "tablist");
 
-  const depts = Object.keys(DEPT_BRANDS);
-  depts.forEach(d => {
-    const btn = document.createElement("button");
+  var depts = Object.keys(DEPT_BRANDS);
+  depts.forEach(function(d) {
+    var btn = document.createElement("button");
     btn.className = "tab" + (d === state.activeDeptTab ? " active" : "");
     btn.textContent = d;
     btn.setAttribute("role", "tab");
     btn.setAttribute("aria-selected", d === state.activeDeptTab);
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", function() {
       state.activeDeptTab = d;
       render();
     });
@@ -1852,46 +1250,38 @@ function renderDeptTabs() {
   });
   card.appendChild(tabs);
 
-  const content = document.createElement("div");
+  var content = document.createElement("div");
   content.className = "two-col";
 
-  const data = DEPT_BRANDS[state.activeDeptTab] || { leaders: [], outsiders: [] };
+  var data = DEPT_BRANDS[state.activeDeptTab] || { leaders: [], outsiders: [] };
 
-  const lCol = document.createElement("div");
-  lCol.innerHTML = `<div class="col-head"><span class="dot green"></span>Лидеры (KPI ≥ 2.0)</div>`;
-  const lList = document.createElement("div");
+  var lCol = document.createElement("div");
+  lCol.innerHTML = '<div class="col-head"><span class="dot green"></span>Лидеры (KPI ≥ 2.0)</div>';
+  var lList = document.createElement("div");
   lList.className = "brand-list";
   if (!data.leaders.length) {
-    lList.innerHTML = `<div style="padding:16px;color:var(--text-muted);font-size:13px">Нет данных</div>`;
+    lList.innerHTML = '<div style="padding:16px;color:var(--text-muted);font-size:13px">Нет данных</div>';
   } else {
-    data.leaders.forEach(b => {
-      const row = document.createElement("div");
+    data.leaders.forEach(function(b) {
+      var row = document.createElement("div");
       row.className = "brand-row";
-      row.innerHTML = `
-        <div class="name">${b.name}</div>
-        <div class="shelves">${b.shelves} пол.</div>
-        <div class="eff hi">${b.eff.toFixed(2)}</div>
-      `;
+      row.innerHTML = '<div class="name">' + b.name + '</div><div class="shelves">' + b.shelves + ' пол.</div><div class="eff hi">' + b.eff.toFixed(2) + '</div>';
       lList.appendChild(row);
     });
   }
   lCol.appendChild(lList);
 
-  const oCol = document.createElement("div");
-  oCol.innerHTML = `<div class="col-head"><span class="dot red"></span>Аутсайдеры (KPI < 0.6)</div>`;
-  const oList = document.createElement("div");
+  var oCol = document.createElement("div");
+  oCol.innerHTML = '<div class="col-head"><span class="dot red"></span>Аутсайдеры (KPI &lt; 0.6)</div>';
+  var oList = document.createElement("div");
   oList.className = "brand-list";
   if (!data.outsiders.length) {
-    oList.innerHTML = `<div style="padding:16px;color:var(--text-muted);font-size:13px">Нет данных</div>`;
+    oList.innerHTML = '<div style="padding:16px;color:var(--text-muted);font-size:13px">Нет данных</div>';
   } else {
-    data.outsiders.forEach(b => {
-      const row = document.createElement("div");
+    data.outsiders.forEach(function(b) {
+      var row = document.createElement("div");
       row.className = "brand-row";
-      row.innerHTML = `
-        <div class="name">${b.name}</div>
-        <div class="shelves">${b.shelves} пол.</div>
-        <div class="eff lo">${b.eff.toFixed(2)}</div>
-      `;
+      row.innerHTML = '<div class="name">' + b.name + '</div><div class="shelves">' + b.shelves + ' пол.</div><div class="eff lo">' + b.eff.toFixed(2) + '</div>';
       oList.appendChild(row);
     });
   }
@@ -1904,78 +1294,47 @@ function renderDeptTabs() {
   return wrap;
 }
 
-/* ----- Пожиратели (расширенный блок) ----- */
 function renderPredators() {
-  const wrap = document.createElement("section");
-  wrap.innerHTML = `
-    <div class="section-head">
-      <div class="section-eyebrow">Ключевая проблема</div>
-      <h2 class="section-title">«Пожиратели» полочного пространства</h2>
-      <p class="section-desc">Бренды с низкой эффективностью, занимающие значительное количество полок. Ранжированы по величине «потерь» — произведению недополученной эффективности на количество полок.</p>
-    </div>
-  `;
+  var wrap = document.createElement("section");
+  wrap.innerHTML = '<div class="section-head"><div class="section-eyebrow">Ключевая проблема</div><h2 class="section-title">«Пожиратели» полочного пространства</h2><p class="section-desc">Бренды с низкой эффективностью, занимающие значительное количество полок. Ранжированы по величине недополученной эффективности — чем больше значение, тем сильнее бренд тянет показатель отдела вниз.</p></div>';
 
-  const card = document.createElement("div");
+  var card = document.createElement("div");
   card.className = "predators-card";
 
-  const totalShelves = PREDATORS.reduce((a, p) => a + p.shelves, 0);
-  const avgEff = PREDATORS.reduce((a, p) => a + p.eff * p.shelves, 0) / totalShelves;
-  const totalLoss = PREDATORS.reduce((a, p) => a + p.loss, 0);
+  var totalShelves = 0;
+  var totalLoss = 0;
+  var totalEffWeighted = 0;
+  PREDATORS.forEach(function(p) {
+    totalShelves += p.shelves;
+    totalLoss += p.loss;
+    totalEffWeighted += p.eff * p.shelves;
+  });
+  var avgEff = totalShelves > 0 ? totalEffWeighted / totalShelves : 0;
 
-  card.innerHTML = `
-    <h3>${PREDATORS.length} брендов занимают ${totalShelves} полок при среднем KPI ${avgEff.toFixed(2)}</h3>
-    <p>Совокупные «потери» эффективности от этих брендов — <strong>${totalLoss.toFixed(1)}</strong> условных единиц. Этого достаточно, чтобы компенсировать разрыв между текущим средним KPI сети (0.90) и целевым (1.0) при грамотном перераспределении полок.</p>
-    <div class="predators-stats">
-      <div class="predators-stat">
-        <div class="b">Всего брендов</div>
-        <div class="v">${PREDATORS.length}</div>
-        <div class="d">в списке «пожирателей»</div>
-      </div>
-      <div class="predators-stat">
-        <div class="b">Всего полок</div>
-        <div class="v">${totalShelves}</div>
-        <div class="d">можно перераспределить</div>
-      </div>
-      <div class="predators-stat">
-        <div class="b">Средний KPI</div>
-        <div class="v">${avgEff.toFixed(2)}</div>
-        <div class="d">при цели 1.00</div>
-      </div>
-      <div class="predators-stat">
-        <div class="b">Совокупные потери</div>
-        <div class="v">${totalLoss.toFixed(1)}</div>
-        <div class="d">условных единиц</div>
-      </div>
-    </div>
-  `;
+  card.innerHTML = '<h3>' + PREDATORS.length + ' брендов занимают ' + totalShelves + ' полок при среднем KPI ' + avgEff.toFixed(2) + '</h3><p>Совокупные потери эффективности от этих брендов — <strong>' + totalLoss.toFixed(1) + ' единиц недополученной эффективности</strong>. Это показывает, сколько пунктов KPI недополучают отделы из-за того, что полки заняты неэффективными брендами вместо брендов с целевым KPI = 1.0.</p>';
 
-  const tableWrap = document.createElement("div");
+  // Формула
+  var formulaBox = document.createElement("div");
+  formulaBox.className = "formula-box";
+  formulaBox.innerHTML = '<strong>Как считается «потеря эффективности» бренда:</strong><span class="formula">Потеря = (1.0 − KPI бренда) × Количество полок</span>Каждая полка, занятая брендом с KPI ниже 1.0, «недодаёт» отделу разницу между фактическим KPI бренда и целевым показателем 1.0. Сумма по всем полкам бренда даёт совокупную потерю эффективности, которую можно было бы получить, если бы эти полки занял бренд с KPI = 1.0.<span class="note">Пример: GO TAPA занимает 20 полок при KPI 0.34 → потеря = (1.0 − 0.34) × 20 = <strong>13.2 единиц</strong> недополученной эффективности.</span>';
+  card.appendChild(formulaBox);
+
+  // Stats
+  var statsDiv = document.createElement("div");
+  statsDiv.className = "predators-stats";
+  statsDiv.innerHTML = '<div class="predators-stat"><div class="b">Всего брендов</div><div class="v">' + PREDATORS.length + '</div><div class="d">в списке «пожирателей»</div></div><div class="predators-stat"><div class="b">Всего полок</div><div class="v">' + totalShelves + '</div><div class="d">можно перераспределить</div></div><div class="predators-stat"><div class="b">Средний KPI</div><div class="v">' + avgEff.toFixed(2) + '</div><div class="d">при цели 1.00</div></div><div class="predators-stat"><div class="b">Совокупные потери</div><div class="v">' + totalLoss.toFixed(1) + '</div><div class="d">единиц недополученной эффективности</div></div>';
+  card.appendChild(statsDiv);
+
+  // Table
+  var tableWrap = document.createElement("div");
   tableWrap.className = "predators-table-wrap";
-  const table = document.createElement("table");
+  var table = document.createElement("table");
   table.className = "predators-table";
-  table.innerHTML = `
-    <thead>
-      <tr>
-        <th>№</th>
-        <th>Бренд</th>
-        <th>Отдел</th>
-        <th style="text-align:right">KPI</th>
-        <th style="text-align:right">Полок</th>
-        <th style="text-align:right">Потери</th>
-      </tr>
-    </thead>
-  `;
-  const tbody = document.createElement("tbody");
-  PREDATORS.forEach((p, i) => {
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${i + 1}</td>
-      <td><strong>${p.brand}</strong></td>
-      <td>${p.dept}</td>
-      <td style="text-align:right">${p.eff.toFixed(2)}</td>
-      <td style="text-align:right">${p.shelves}</td>
-      <td style="text-align:right" class="loss">−${p.loss.toFixed(1)}</td>
-    `;
+  table.innerHTML = '<thead><tr><th>№</th><th>Бренд</th><th>Отдел</th><th style="text-align:right">KPI</th><th style="text-align:right">Полок</th><th style="text-align:right">Потеря эффективности</th></tr></thead>';
+  var tbody = document.createElement("tbody");
+  PREDATORS.forEach(function(p, i) {
+    var tr = document.createElement("tr");
+    tr.innerHTML = '<td>' + (i + 1) + '</td><td><strong>' + p.brand + '</strong></td><td>' + p.dept + '</td><td style="text-align:right">' + p.eff.toFixed(2) + '</td><td style="text-align:right">' + p.shelves + '</td><td style="text-align:right" class="loss">−' + p.loss.toFixed(1) + '</td>';
     tbody.appendChild(tr);
   });
   table.appendChild(tbody);
@@ -1986,34 +1345,17 @@ function renderPredators() {
   return wrap;
 }
 
-/* ----- Новые бренды ----- */
 function renderNewBrands() {
-  const wrap = document.createElement("section");
-  wrap.innerHTML = `
-    <div class="section-head">
-      <div class="section-eyebrow">Решение · Авторизация</div>
-      <h2 class="section-title">Бренды для ввода в ассортимент</h2>
-      <p class="section-desc">Бренды, официально представленные в России и в сети Золотое Яблоко, но отсутствующие в Иркутске. Их авторизация позволит заполнить полки, высвобождаемые от аутсайдеров.</p>
-    </div>
-  `;
+  var wrap = document.createElement("section");
+  wrap.innerHTML = '<div class="section-head"><div class="section-eyebrow">Решение · Авторизация</div><h2 class="section-title">Бренды для ввода в ассортимент</h2><p class="section-desc">Бренды, официально представленные в России и в сети Золотое Яблоко, но отсутствующие в Иркутске. Их авторизация позволит заполнить полки, высвобождаемые от аутсайдеров.</p></div>';
 
-  const grid = document.createElement("div");
+  var grid = document.createElement("div");
   grid.className = "new-brands-grid";
 
-  NEW_BRANDS.forEach(b => {
-    const card = document.createElement("article");
+  NEW_BRANDS.forEach(function(b) {
+    var card = document.createElement("article");
     card.className = "new-brand";
-    card.innerHTML = `
-      <span class="new-brand-cat">${b.category}</span>
-      <div class="new-brand-name">${b.name}</div>
-      <div class="new-brand-country">${b.country}</div>
-      <div class="new-brand-desc">${b.desc}</div>
-      <div style="font-size:12px;color:var(--text-muted);margin-bottom:12px;line-height:1.5"><strong style="color:var(--text)">Обоснование:</strong> ${b.rationale}</div>
-      <div class="new-brand-metrics">
-        <div><div class="m-label">Ожидаемый KPI</div><div class="m-val">${b.expEff}</div></div>
-        <div style="text-align:right"><div class="m-label">Полок</div><div class="m-val">${b.shelves}</div></div>
-      </div>
-    `;
+    card.innerHTML = '<span class="new-brand-cat">' + b.category + '</span><div class="new-brand-name">' + b.name + '</div><div class="new-brand-country">' + b.country + '</div><div class="new-brand-desc">' + b.desc + '</div><div style="font-size:12px;color:var(--text-muted);margin-bottom:12px;line-height:1.5"><strong style="color:var(--text)">Обоснование:</strong> ' + b.rationale + '</div><div class="new-brand-metrics"><div><div class="m-label">Ожидаемый KPI</div><div class="m-val">' + b.expEff + '</div></div><div style="text-align:right"><div class="m-label">Полок</div><div class="m-val">' + b.shelves + '</div></div></div>';
     grid.appendChild(card);
   });
 
@@ -2021,212 +1363,11 @@ function renderNewBrands() {
   return wrap;
 }
 
-/* ----- Small multiples: 17 отделов ----- */
-function renderSmallMultiples() {
-  const wrap = document.createElement("section");
-  wrap.innerHTML = `
-    <div class="section-head">
-      <div class="section-eyebrow">Пространственный анализ</div>
-      <h2 class="section-title">Полки vs Эффективность по отделам</h2>
-      <p class="section-desc">Каждая диаграмма — один отдел. По оси X — количество полок, по оси Y — KPI. Размер точки отражает приоритет: чем ниже KPI и больше полок, тем крупнее точка. Цель — переместить крупные красные точки в зелёную зону.</p>
-    </div>
-  `;
-
-  const grid = document.createElement("div");
-  grid.className = "sm-grid";
-
-  // Группируем по отделам
-  const byDept = {};
-  SHEET_DATA.forEach(r => {
-    if (!byDept[r.dept]) byDept[r.dept] = [];
-    byDept[r.dept].push(r);
-  });
-
-  // Средний KPI отдела
-  function deptAvg(rows) {
-    if (!rows.length) return 0;
-    let num = 0, den = 0;
-    rows.forEach(r => { num += r.eff * r.shelves; den += r.shelves; });
-    return den > 0 ? num / den : 0;
-  }
-
-  // Порядок отделов — как в основном списке
-  const deptOrder = DEPARTMENTS.map(d => d.name);
-  // Добавим отделы, которых может не быть в DEPARTMENTS
-  Object.keys(byDept).forEach(d => {
-    if (!deptOrder.includes(d)) deptOrder.push(d);
-  });
-
-  deptOrder.forEach(dept => {
-    const rows = byDept[dept] || [];
-    const avg = deptAvg(rows);
-
-    const card = document.createElement("div");
-    card.className = "sm-card";
-
-    const head = document.createElement("div");
-    head.className = "sm-head";
-    head.innerHTML = `
-      <div class="sm-title">${dept}</div>
-      <div class="sm-kpi ${kpiClass(avg)}">${avg.toFixed(2)}</div>
-    `;
-    card.appendChild(head);
-
-    const canvasWrap = document.createElement("div");
-    canvasWrap.className = "sm-canvas-wrap";
-    const canvas = document.createElement("canvas");
-    canvas.dataset.dept = dept;
-    canvas.setAttribute("role", "img");
-    canvas.setAttribute("aria-label", `Диаграмма ${dept}`);
-    canvasWrap.appendChild(canvas);
-    card.appendChild(canvasWrap);
-
-    const legend = document.createElement("div");
-    legend.className = "sm-legend";
-    legend.innerHTML = `
-      <span><i style="background:#c5f04b"></i>KPI ≥ 2.0</span>
-      <span><i style="background:#fbbf24"></i>0.8 – 2.0</span>
-      <span><i style="background:#f87171"></i>< 0.8</span>
-      <span style="margin-left:auto;color:var(--text-subtle)">${rows.length} брендов</span>
-    `;
-    card.appendChild(legend);
-
-    grid.appendChild(card);
-  });
-
-  wrap.appendChild(grid);
-
-  // Отрисовка после вставки в DOM
-  requestAnimationFrame(() => {
-    grid.querySelectorAll("canvas").forEach(c => drawSmallCanvas(c, byDept[c.dataset.dept] || []));
-  });
-
-  return wrap;
-}
-
-function drawSmallCanvas(canvas, rows) {
-  const dpr = window.devicePixelRatio || 1;
-  const W = canvas.parentElement.clientWidth || 280;
-  const H = 180;
-  canvas.width = W * dpr;
-  canvas.height = H * dpr;
-  canvas.style.width = W + "px";
-  canvas.style.height = H + "px";
-
-  const ctx = canvas.getContext("2d");
-  ctx.scale(dpr, dpr);
-  ctx.clearRect(0, 0, W, H);
-
-  const padL = 28, padR = 10, padT = 10, padB = 22;
-  const chartW = W - padL - padR;
-  const chartH = H - padT - padB;
-
-  if (!rows.length) {
-    ctx.fillStyle = "#a1a1aa";
-    ctx.font = "11px -apple-system, system-ui, sans-serif";
-    ctx.textAlign = "center";
-    ctx.fillText("Нет данных", W / 2, H / 2);
-    return;
-  }
-
-  const maxSh = Math.max(...rows.map(r => r.shelves), 5);
-  const maxEff = Math.max(...rows.map(r => r.eff), 2);
-
-  // Grid
-  ctx.strokeStyle = "#f4f4f5";
-  ctx.lineWidth = 1;
-  ctx.font = "9px -apple-system, system-ui, sans-serif";
-  ctx.fillStyle = "#a1a1aa";
-
-  // Y axis (eff)
-  ctx.textAlign = "right";
-  for (let v = 0; v <= maxEff; v += Math.max(1, Math.ceil(maxEff / 4))) {
-    const y = padT + chartH - (v / maxEff) * chartH;
-    ctx.beginPath();
-    ctx.moveTo(padL, y);
-    ctx.lineTo(padL + chartW, y);
-    ctx.stroke();
-    ctx.fillText(v.toFixed(0), padL - 4, y + 3);
-  }
-
-  // X axis (shelves)
-  ctx.textAlign = "center";
-  for (let v = 0; v <= maxSh; v += Math.max(1, Math.ceil(maxSh / 4))) {
-    const x = padL + (v / maxSh) * chartW;
-    ctx.beginPath();
-    ctx.moveTo(x, padT);
-    ctx.lineTo(x, padT + chartH);
-    ctx.stroke();
-    ctx.fillText(v, x, H - padB + 12);
-  }
-
-  // Target line eff=1.0
-  if (maxEff >= 1.0) {
-    const targetY = padT + chartH - (1.0 / maxEff) * chartH;
-    ctx.strokeStyle = "#09090b";
-    ctx.setLineDash([3, 3]);
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(padL, targetY);
-    ctx.lineTo(padL + chartW, targetY);
-    ctx.stroke();
-    ctx.setLineDash([]);
-  }
-
-  // Bubbles
-  // Сортируем: сначала крупные (больше полок + ниже KPI), чтобы мелкие были поверх
-  const sorted = [...rows].sort((a, b) => {
-    const scoreA = a.shelves * (2 - Math.min(a.eff, 2));
-    const scoreB = b.shelves * (2 - Math.min(b.eff, 2));
-    return scoreB - scoreA;
-  });
-
-  sorted.forEach(r => {
-    const x = padL + (r.shelves / maxSh) * chartW;
-    const y = padT + chartH - (Math.min(r.eff, maxEff) / maxEff) * chartH;
-    // Размер: зависит от "важности" (полки × недополученная эффективность)
-    const importance = r.shelves * Math.max(0, 1 - Math.min(r.eff, 1));
-    const baseR = 3;
-    const radius = baseR + Math.min(8, Math.sqrt(importance) * 1.2);
-
-    let color = "#f87171";
-    if (r.eff >= 2.0) color = "#c5f04b";
-    else if (r.eff >= 0.8) color = "#fbbf24";
-
-    ctx.fillStyle = color;
-    ctx.globalAlpha = 0.75;
-    ctx.beginPath();
-    ctx.arc(x, y, radius, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.globalAlpha = 1;
-
-    ctx.strokeStyle = "#fff";
-    ctx.lineWidth = 1;
-    ctx.stroke();
-
-    // Подпись для крупных точек
-    if (r.shelves >= 8 || r.eff >= 4 || r.shelves >= 15) {
-      ctx.fillStyle = "#09090b";
-      ctx.font = "600 9px -apple-system, system-ui, sans-serif";
-      ctx.textAlign = "left";
-      const shortName = r.brand.length > 12 ? r.brand.slice(0, 11) + "…" : r.brand;
-      ctx.fillText(shortName, x + radius + 2, y + 3);
-    }
-  });
-}
-
-/* ----- Roadmap ----- */
 function renderRoadmap() {
-  const wrap = document.createElement("section");
-  wrap.innerHTML = `
-    <div class="section-head">
-      <div class="section-eyebrow">План действий</div>
-      <h2 class="section-title">Roadmap до показателя 1.0</h2>
-      <p class="section-desc">Пять последовательных шагов для достижения целевого KPI в течение следующего квартала.</p>
-    </div>
-  `;
+  var wrap = document.createElement("section");
+  wrap.innerHTML = '<div class="section-head"><div class="section-eyebrow">План действий</div><h2 class="section-title">Roadmap до показателя 1.0</h2><p class="section-desc">Пять последовательных шагов для достижения целевого KPI в течение следующего квартала.</p></div>';
 
-  const steps = [
+  var steps = [
     {
       title: "Разморозка метража",
       desc: "Сократить полочное пространство аутсайдеров из списка «пожирателей» и передать его лидерам.",
@@ -2282,78 +1423,36 @@ function renderRoadmap() {
     }
   ];
 
-  const roadmap = document.createElement("div");
+  var roadmap = document.createElement("div");
   roadmap.className = "roadmap";
-  steps.forEach((s, i) => {
-    const step = document.createElement("div");
+  steps.forEach(function(s, i) {
+    var step = document.createElement("div");
     step.className = "roadmap-step";
-    step.innerHTML = `
-      <div class="step-num">${i + 1}</div>
-      <div class="step-body">
-        <h4>${s.title}</h4>
-        <p>${s.desc}</p>
-        <ul>${s.items.map(it => `<li>${it}</li>`).join("")}</ul>
-      </div>
-    `;
+    step.innerHTML = '<div class="step-num">' + (i + 1) + '</div><div class="step-body"><h4>' + s.title + '</h4><p>' + s.desc + '</p><ul>' + s.items.map(function(it) { return '<li>' + it + '</li>'; }).join("") + '</ul></div>';
     roadmap.appendChild(step);
   });
   wrap.appendChild(roadmap);
   return wrap;
 }
 
-/* ----- Итог (сухой) ----- */
 function renderSummary() {
-  const wrap = document.createElement("section");
-  const card = document.createElement("div");
+  var wrap = document.createElement("section");
+  var card = document.createElement("div");
   card.className = "summary-card";
 
-  const totalSh = PREDATORS.reduce((a, p) => a + p.shelves, 0);
-  const totalLoss = PREDATORS.reduce((a, p) => a + p.loss, 0);
-  const aboveTarget = DEPARTMENTS.filter(d => d.aug >= 1.0).length;
+  var totalSh = 0;
+  var totalLoss = 0;
+  PREDATORS.forEach(function(p) { totalSh += p.shelves; totalLoss += p.loss; });
+  var aboveTarget = DEPARTMENTS.filter(function(d) { return d.aug >= 1.0; }).length;
 
-  card.innerHTML = `
-    <div class="summary-label">Итоги отчёта</div>
-    <ul class="summary-list">
-      <li><span class="bullet"></span><span>Средний KPI сети по отделам за август 2026 составил <strong>0.90</strong> при целевом показателе <strong>1.00</strong>. Разрыв — 0.10 пункта.</span></li>
-      <li><span class="bullet"></span><span>Из 17 отделов целевой порог 1.0 преодолевают <strong>${aboveTarget}</strong> отделов. Ещё 6 отделов находятся в критической зоне с KPI ниже 0.5.</span></li>
-      <li><span class="bullet"></span><span>Выявлено <strong>${PREDATORS.length} брендов-«пожирателей»</strong>, которые занимают <strong>${totalSh} полок</strong> при среднем KPI ниже 0.5. Совокупные потери эффективности — <strong>${totalLoss.toFixed(1)}</strong> условных единиц.</span></li>
-      <li><span class="bullet"></span><span>Одновременно зафиксированы бренды-лидеры с KPI от 2.0 до 14.25, испытывающие дефицит полочного пространства и теряющие продажи из-за OOS.</span></li>
-      <li><span class="bullet"></span><span>Для достижения цели 1.0 предлагается перераспределить ~60 полок от аутсайдеров к лидерам и авторизовать <strong>10 новых брендов</strong>, официально представленных в сети Золотое Яблоко.</span></li>
-      <li><span class="bullet"></span><span>Реализация плана не требует дополнительных инвестиций в аренду или ремонт и может быть выполнена в течение одного квартала.</span></li>
-    </ul>
-    <div class="summary-kpi">
-      <div class="summary-kpi-item">
-        <div class="l">Текущий KPI</div>
-        <div class="v">0.90</div>
-      </div>
-      <div class="summary-kpi-item">
-        <div class="l">Целевой KPI</div>
-        <div class="v">1.00</div>
-      </div>
-      <div class="summary-kpi-item">
-        <div class="l">Разрыв</div>
-        <div class="v">+0.10</div>
-      </div>
-      <div class="summary-kpi-item">
-        <div class="l">Полок к перераспределению</div>
-        <div class="v">~60</div>
-      </div>
-      <div class="summary-kpi-item">
-        <div class="l">Новых брендов к авторизации</div>
-        <div class="v">10</div>
-      </div>
-    </div>
-  `;
+  card.innerHTML = '<div class="summary-label">Итоги отчёта</div><ul class="summary-list"><li><span class="bullet"></span><span>Средний KPI сети по отделам за август 2026 составил <strong>0.90</strong> при целевом показателе <strong>1.00</strong>. Разрыв — 0.10 пункта.</span></li><li><span class="bullet"></span><span>Из 17 отделов целевой порог 1.0 преодолевают <strong>' + aboveTarget + '</strong> отделов. Ещё 6 отделов находятся в критической зоне с KPI ниже 0.5.</span></li><li><span class="bullet"></span><span>Выявлено <strong>' + PREDATORS.length + ' брендов-«пожирателей»</strong>, которые занимают <strong>' + totalSh + ' полок</strong> при среднем KPI ниже 0.5. Совокупные потери эффективности — <strong>' + totalLoss.toFixed(1) + ' единиц недополученной эффективности</strong>.</span></li><li><span class="bullet"></span><span>Одновременно зафиксированы бренды-лидеры с KPI от 2.0 до 14.25, испытывающие дефицит полочного пространства и теряющие продажи из-за OOS.</span></li><li><span class="bullet"></span><span>Для достижения цели 1.0 предлагается перераспределить ~60 полок от аутсайдеров к лидерам и авторизовать <strong>10 новых брендов</strong>, официально представленных в сети Золотое Яблоко.</span></li><li><span class="bullet"></span><span>Реализация плана не требует дополнительных инвестиций в аренду или ремонт и может быть выполнена в течение одного квартала.</span></li></ul><div class="summary-kpi"><div class="summary-kpi-item"><div class="l">Текущий KPI</div><div class="v">0.90</div></div><div class="summary-kpi-item"><div class="l">Целевой KPI</div><div class="v">1.00</div></div><div class="summary-kpi-item"><div class="l">Разрыв</div><div class="v">+0.10</div></div><div class="summary-kpi-item"><div class="l">Полок к перераспределению</div><div class="v">~60</div></div><div class="summary-kpi-item"><div class="l">Новых брендов к авторизации</div><div class="v">10</div></div></div>';
   wrap.appendChild(card);
   return wrap;
 }
 
 function renderFooter() {
-  const f = document.createElement("footer");
-  f.innerHTML = `
-    <div>Аналитический отчёт · Золотое Яблоко Иркутск · 2026</div>
-    <div style="margin-top:4px">Подготовлено: Масликова Дарья Владимировна, главный мерчандайзер</div>
-  `;
+  var f = document.createElement("footer");
+  f.innerHTML = '<div>Аналитический отчёт · Золотое Яблоко Иркутск · 2026</div><div style="margin-top:4px">Подготовлено: Масликова Дарья Владимировна, главный мерчандайзер</div>';
   return f;
 }
 
@@ -2362,23 +1461,14 @@ function renderFooter() {
    ========================================================= */
 function init() {
   render();
-  let resizeTimer;
-  window.addEventListener("resize", () => {
+  var resizeTimer;
+  window.addEventListener("resize", function() {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      const c1 = document.getElementById("deptChart");
-      const c2 = document.getElementById("dynChart");
+    resizeTimer = setTimeout(function() {
+      var c1 = document.getElementById("deptChart");
+      var c2 = document.getElementById("dynChart");
       if (c1) drawDeptChart(c1);
       if (c2) drawDynChart(c2);
-      // Перерисовка small multiples
-      const byDept = {};
-      SHEET_DATA.forEach(r => {
-        if (!byDept[r.dept]) byDept[r.dept] = [];
-        byDept[r.dept].push(r);
-      });
-      document.querySelectorAll(".sm-grid canvas").forEach(c => {
-        drawSmallCanvas(c, byDept[c.dataset.dept] || []);
-      });
     }, 200);
   });
 }
