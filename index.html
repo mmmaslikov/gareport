@@ -1622,15 +1622,14 @@ function renderDeptChart() {
 
   const legend = document.createElement("div");
   legend.className = "legend";
-  legend.innerHTML = `
-    <div class="legend-item"><span class="legend-swatch" style="background:#c5f04b"></span>Выше 1.0 (драйверы)</div>
-    <div class="legend-item"><span class="legend-swatch" style="background:#fbbf24"></span>0.7 – 1.0 (середина)</div>
-    <div class="legend-item"><span class="legend-swatch" style="background:#f87171"></span>Ниже 0.7 (аутсайдеры)</div>
-    <div class="legend-item"><span class="legend-swatch" style="background:#09090b;height:2px;width:14px;border-radius:0"></span>Цель 1.0</div>
-  `;
+  legend.innerHTML = 
+    '<div class="legend-item"><span class="legend-swatch" style="background:#c5f04b"></span>Выше 1.0 (драйверы)</div>' +
+    '<div class="legend-item"><span class="legend-swatch" style="background:#fbbf24"></span>0.7 – 1.0 (середина)</div>' +
+    '<div class="legend-item"><span class="legend-swatch" style="background:#f87171"></span>Ниже 0.7 (аутсайдеры)</div>' +
+    '<div class="legend-item"><span class="legend-swatch" style="background:#09090b;height:2px;width:14px;border-radius:0"></span>Цель 1.0</div>';
   card.appendChild(legend);
   wrap.appendChild(card);
-
+  
   requestAnimationFrame(() => drawDeptChart(canvas));
   return wrap;
 }
